@@ -1,3 +1,3 @@
 # Design
 
-Where design happens
+Where design happens™
