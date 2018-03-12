@@ -47,13 +47,13 @@ git clone git@github.com:artsy/design.git
 ```
 your-prototype/
 └── assets/
-│   ├── css
+│   ├── css/
 │   │   └── styles.css
-│   ├── img
+│   ├── img/
 │   │   ├── a.jpg
 │   │   ├── b.jpg
 │   │   └── c.jpg
-│   └── js
+│   └── js/
 │       └── app.css
 └── index.html
 ```
