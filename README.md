@@ -34,14 +34,6 @@ git clone git@github.com:artsy/design.git
 
 ---
 
-### Always work on a branch
-1. Open VSCode and create a new branch
-2. Commit and push branch to GitHub
-3. Create a pull request to merge your branch into master
-4. Delete your working branch
-
----
-
 ### Prototype Asset Structure
 
 ```
@@ -60,3 +52,21 @@ your-prototype/
 
 - Link to Google's CDN for jQuery rather than adding the file directly
 - Link to the root stylesheet for font access tktkt 
+
+---
+
+### Version Control with VSCode
+1. Go to Source Control tab
+2. Stage all changes
+3. Write a commit messge
+4. Push
+
+![Illustration](assets/img/version-control.mp4)
+
+---
+
+### Always work on a branch
+1. Open VSCode and create a new branch
+2. Commit and push branch to GitHub
+3. Create a pull request to merge your branch into master
+4. Delete your working branch
