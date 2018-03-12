@@ -61,7 +61,7 @@ your-prototype/
 3. Write a commit messge
 4. Push
 
-![Illustration](assets/img/version-control.mp4)
+![Illustration](assets/img/version-control.gif)
 
 ---
 
