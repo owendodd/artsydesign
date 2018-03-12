@@ -70,3 +70,5 @@ your-prototype/
 2. Commit and push branch to GitHub
 3. Create a pull request to merge your branch into master
 4. Delete your working branch
+
+![Illustration](assets/img/branching.gif)
