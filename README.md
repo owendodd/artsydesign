@@ -16,7 +16,7 @@
 
 #### Set your Git username and email
 1. `git config --global user.name "<YOUR NAME>"`
-2. git config --global user.email `"<YOUR EMAIL ADDRESS>"`
+2. `git config --global user.email "<YOUR EMAIL ADDRESS>"`
 
 #### Download and install software
 1. [VS Code](https://code.visualstudio.com/download)
