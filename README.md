@@ -47,14 +47,15 @@ git clone git@github.com:artsy/design.git
 ```
 your-prototype/
 └── assets/
-    ├── css
-    │   └── styles.css
-    ├── img
-    │   ├── a.jpg
-    │   ├── b.jpg
-    │   └── c.jpg
-    └── js
-        └── app.css
+│   ├── css
+│   │   └── styles.css
+│   ├── img
+│   │   ├── a.jpg
+│   │   ├── b.jpg
+│   │   └── c.jpg
+│   └── js
+│       └── app.css
+└── index.html
 ```
 
 - Link to Google's CDN for jQuery rather than adding the file directly
