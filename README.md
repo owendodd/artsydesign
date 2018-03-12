@@ -34,7 +34,7 @@ git clone git@github.com:artsy/design.git
 
 ---
 
-### Prototype Asset Structure
+### Prototype folder structure
 
 ```
 your-prototype/
@@ -46,7 +46,7 @@ your-prototype/
 │   │   ├── b.jpg
 │   │   └── c.jpg
 │   └── js/
-│       └── app.css
+│       └── app.js
 └── index.html
 ```
 
@@ -70,5 +70,6 @@ your-prototype/
 2. Commit and push branch to GitHub
 3. Create a pull request to merge your branch into master
 4. Delete your working branch
+5. Set branch to master and pull
 
 ![Illustration](assets/img/branching.gif)
