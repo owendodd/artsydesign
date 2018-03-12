@@ -1,4 +1,4 @@
-### Typography & Interaction 2
+### Artsy Design - Prototypes
 
 ---
 
