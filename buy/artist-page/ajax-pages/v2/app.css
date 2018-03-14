@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  background: #fff;
+  width: 100%;
+  z-index: -1;
+  opacity: 0;
+}
+
+.lightbox.show {
+  z-index: 10;
+  opacity: 1;
+  -webkit-transition: all 500ms ease;
+     -moz-transition: all 500ms ease;
+       -o-transition: all 500ms ease;
+          transition: all 500ms ease;
+}
+
+.header-wrapper {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-bottom: 2px solid #E5E5E5;
+  height: 50px;
+  z-index: 5;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+}
+
+.sticky-header {
+  position: relative;
+  top: 0;
+  opacity: 0;
+  -webkit-transition: all 200ms ease;
+     -moz-transition: all 200ms ease;
+       -o-transition: all 200ms ease;
+          transition: all 200ms ease;
+}
+
+.show {
+  opacity: 1;
+}
+
+.content {
+  margin: 0 auto;
+  width: 1425px;
+  position: relative;
+}
+
+.button {
+  position: absolute;
+  display: block;
+  width: 128px;
+  height: 30px;
+  background: #ff0;
+  opacity: 0;
+}
+
+.read-more {
+  top: 839px;
+  left: 650px;
+}
+
+.nav-artist { top: 73px; left: 20px; width: 117px; }
+.nav-about { top: 73px; left: 165px; width: 78px; }
+.nav-works { top: 73px; left: 266px; width: 78px; }
+.nav-shows { top: 73px; left: 365px; width: 78px; }
+.nav-articles-press { top: 73px; left: 470px; width: 98px; }
+.nav-related-artists { top: 73px; left: 590px; width: 188px; }
+
+.about { top: 511px; left: 145px; width: 78px; }
+.works { top: 511px; left: 248px; width: 78px; }
+.shows { top: 511px; left: 349px; width: 78px; }
+.articles-press { top: 511px; left: 447px; width: 107px; }
+.related-artists { top: 511px; left: 575px; width: 188px; }
+
+.lightboxable { top: 1486px; left: 727px; width: 170px; height: 48px; }
+.close-lightbox {
+  position: absolute;
+  display: block;
+  top: 30px;
+  left: 30px;
+  width: 75px;
+  height: 75px;
+  background: #ff0;
+  opacity: 0;
+}

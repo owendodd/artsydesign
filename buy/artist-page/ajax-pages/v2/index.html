@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="app.css">
+    <title>Kevin Beasley</title>
+  </head>
+
+  <body>
+    <div class="lightbox">
+      <img id="lightbox-img" src="assets/cv-lightbox@1x.jpg" />
+      <a class="close-lightbox" href="#"></a>
+    </div>
+
+    <div class="header-wrapper">
+      <div class="header">
+        <img src="assets/header.jpg" />
+        <img class="sticky-header" src="assets/header-default.png" />
+        <a class="button nav-artist" data-header="assets/header-default.png" data-content="assets/landing@1x.jpg" href="#"></a>
+        <a class="button nav-about" data-header="assets/header-about.png" data-content="assets/about@1x.jpg" href="#"></a>
+        <a class="button nav-works" data-header="assets/header-works.png" data-content="assets/works@1x.jpg" href="#"></a>
+        <a class="button nav-shows" data-header="assets/header-shows.png" data-content="assets/shows@1x.jpg" href="#"></a>
+        <a class="button nav-articles-press" data-header="assets/header-articles-press.png" data-content="assets/articles-press@1x.jpg" href="#"></a>
+        <a class="button nav-related-artists" data-header="assets/header-related-artists.png" data-content="assets/related-artists@1x.jpg" href="#"></a>
+      </div>
+    </div>
+
+    <div class="content">
+      <img id="content-img" src="assets/landing@1x.jpg" />
+      <a class="button read-more" data-header="assets/header-default.png" data-content="assets/landing-expanded@1x.jpg" href="#"></a>
+      <a class="button about" data-header="assets/header-about.png" data-content="assets/about@1x.jpg" href="#"></a>
+      <a class="button works" data-header="assets/header-works.png" data-content="assets/works@1x.jpg" href="#"></a>
+      <a class="button shows" data-header="assets/header-shows.png" data-content="assets/shows@1x.jpg" href="#"></a>
+      <a class="button articles-press" data-header="assets/header-articles-press.png" data-content="assets/articles-press@1x.jpg" href="#"></a>
+      <a class="button related-artists" data-header="assets/header-related-artists.png" data-content="assets/related-artists@1x.jpg" href="#"></a>
+
+      <a class="button lightboxable cv" href="#"></a>
+    </div>
+
+
+    <script>
+      window.onscroll = function() {
+        var $sticky_header = $('.sticky-header');
+        $(window).scrollTop() >= 510 ? $sticky_header.addClass('show') : $sticky_header.removeClass('show');
+      }
+
+      $('.close-lightbox').click(function(event) {
+        event.preventDefault();
+        $('.lightbox').removeClass('show');
+      });
+
+      $('.button').click(function(event) {
+        event.preventDefault();
+        var header  = $(this).data('header'),
+            content = $(this).data('content');
+
+        if ($(this).hasClass('lightboxable')) {
+          $('.lightbox').addClass('show');
+        } else if ($(this).hasClass('nav-artist')) {
+          $('#content-img').attr('src', content);
+          $('.sticky-header').attr('src', header);
+          $('body, html').animate({ scrollTop: 0 });
+        } else {
+          $('#content-img').attr('src', content);
+          $('.sticky-header').attr('src', header);
+          $('body, html').animate({ scrollTop: 440 });
+        }
+      });
+    </script>
+  </body>
+</html>
