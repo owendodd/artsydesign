@@ -1,11 +1,18 @@
 body {
   margin: 0;
   padding: 40px;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Unica77LLWebRegular", sans-serif;
   font-size: 18px;
+  line-height: 1.4em;
+  -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3 { font-size: 18px; }
+h1, h2, h3 { 
+  font-size: 18px;
+  font-family: "Unica77LLWebMedium", sans-serif;
+  font-weight: normal;
+ }
+
 h2 { margin: 0; }
 h3 { margin: 40px 0 0 0; }
 
