@@ -112,27 +112,33 @@ p
 // News Layout
 .expand-button
   opacity: 0
+  font-size: 14px
+  padding: 10px 15px
+  color: white
+  background-color: black
+  border-radius: 2px
   float: right
   +p(transition, all 0.5s ease)
   a
     text-decoration: none
+    color: white  
 
 .news-item
   margin: 140px auto
   max-width: 780px
   padding: 20px 30px 30px
+  border: 1px solid transparent
   +p(transition, all 0.5s ease)
   &:first-of-type
     margin-top: 200px
   &:hover
     border-radius: 4px
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2)
+    border: 1px solid #e5e5e5
   &:hover .expand-button
     opacity: 1
 
-.news-item.expanded
-  &:hover
-    box-shadow: none
+.conent.expanded:hover
+    border: 1px solid transparent
 
 
 
@@ -154,10 +160,10 @@ p
 .content
   font-family: "Adobe Garamond W08"
   font-size: 23px
-  line-height: 1.3em
+  line-height: 1.4em
   position: relative
   p, div
-    max-width: 660px
+    max-width: 680px
     margin: 20px 0
   .twitter
     width: 450px
