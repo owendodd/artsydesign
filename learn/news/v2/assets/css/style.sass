@@ -68,7 +68,7 @@ p
 
 .news-header
   background-color: #fff
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2)
+  border-bottom: 1px solid #e5e5e5
   display: flex
   align-content: center
   justify-content: center
@@ -87,7 +87,7 @@ p
 
 .u-sm
   font-family: "Unica77LLWebMedium", Arial, sans-serif
-  font-size: 16px
+  font-size: 14px
   font-weight: normal
 
 .u-m
@@ -112,16 +112,16 @@ p
 // News Layout
 .expand-button
   opacity: 0
-  font-size: 14px
-  padding: 10px 15px
-  color: white
+  padding: 7px 15px 9px
+  margin-top: -6px
   background-color: black
   border-radius: 2px
   float: right
   +p(transition, all 0.5s ease)
   a
+    font-size: 14px
+    color: white
     text-decoration: none
-    color: white  
 
 .news-item
   margin: 140px auto
@@ -133,12 +133,13 @@ p
     margin-top: 200px
   &:hover
     border-radius: 4px
-    border: 1px solid #e5e5e5
+    border: 1px solid #efefef
   &:hover .expand-button
     opacity: 1
 
-.conent.expanded:hover
-    border: 1px solid transparent
+.news-item.expanded
+  &:hover
+    box-shadow: none
 
 
 
@@ -160,10 +161,10 @@ p
 .content
   font-family: "Adobe Garamond W08"
   font-size: 23px
-  line-height: 1.4em
+  line-height: 1.3em
   position: relative
   p, div
-    max-width: 680px
+    max-width: 660px
     margin: 20px 0
   .twitter
     width: 450px
@@ -182,7 +183,7 @@ p
   .via
     color: #ccc
     font-family: "Unica77LLWebRegular", Arial, sans-serif
-    font-size: 16px
+    font-size: 14px
     a
       color: #ccc
 
