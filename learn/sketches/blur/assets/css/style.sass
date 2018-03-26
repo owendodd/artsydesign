@@ -1,0 +1,37 @@
+// Mixins
+@mixin p($property, $val)
+  -webkit-#{$property}: $val
+  -moz-#{$property}: $val
+  -ms-#{$property}: $val
+  #{$property}: $val
+
+
+
+// Basics
+body
+  font-family: "Unica77LLWebRegular", Arial, sans-serif
+  font-size: 19px
+  font-weight: normal
+  color: black
+  margin: 0
+  -webkit-font-smoothing: subpixel-antialiased
+
+img
+  width: 100%
+  +p(transition, all 0.5s ease)
+
+.blur
+  +p(filter, blur(80px) opacity(100%))  
+
+.modal
+  position: fixed
+  top: 50%
+  left: 50%
+  width: 80vw
+  height: 80vh
+  transform: translate(-50%, -50%)
+  background-color: white
+  border-radius: 4px
+  
+  +p(transition, all 0.5s ease)
+  opacity: 0
