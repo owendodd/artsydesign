@@ -1,0 +1,84 @@
+// Mixins
+@mixin p($property, $val)
+  -webkit-#{$property}: $val
+  -moz-#{$property}: $val
+  -ms-#{$property}: $val
+  #{$property}: $val
+
+$unica: "Unica77LLWebRegular", helvetica, sans-serif
+$gara: "Adobe Garamond W08", times, serif
+
+
+// Basics
+
+body
+  width: 100%
+  padding: 0
+  margin: 0
+
+p
+  margin: 0
+
+h1
+  margin: 0
+
+
+
+// Layout
+.step
+  background-color: #e5e5e5
+  padding: 10px
+  margin: 20px
+  min-height: 200px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.step-class
+  font-family: $unica
+  font-size: 12pt
+  font-weight: normal
+  line-height: 18pt
+
+
+// Type
+
+.sans-7
+  font-family: $unica
+  font-size: 100pt
+  line-height: 110pt
+
+.sans-6
+  font-family: $unica
+  font-size: 60pt
+  line-height: 68pt
+
+.sans-5
+  font-family: $unica
+  font-size: 40pt
+  line-height: 46pt
+
+.sans-4
+  font-family: $unica
+  font-size: 30pt
+  line-height: 34pt
+
+.sans-3
+  font-family: $unica
+  font-size: 100pt
+  line-height: 110pt
+
+.sans-2
+  font-family: $unica
+  font-size: 100pt
+  line-height: 110pt
+
+.sans-1
+  font-family: $unica
+  font-size: 100pt
+  line-height: 110pt
+
+.sans-0
+  font-family: $unica
+  font-size: 100pt
+  line-height: 110pt
