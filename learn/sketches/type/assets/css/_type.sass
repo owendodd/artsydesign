@@ -1,11 +1,11 @@
 // Type Mixins
-@mixin sans($size, $line)
+=sans($size, $line)
   font-family: "Unica77LLWebRegular", helvetica, sans-serif
   font-weight: normal
   font-size: $size
   line-height: $line
 
-@mixin serif($size, $line)
+=serif($size, $line)
   font-family: "Adobe Garamond W08", times, serif
   font-weight: normal
   font-size: $size
@@ -13,350 +13,112 @@
 
 // Breakpoint Mixins
 
-@mixin break ($break-point)
-  @media screen and ($break-point)
+=xl
+  @media (min-width: 1192px) 
+    @content
+=l
+  @media (min-width: 1024px) and (max-width: 1191px)
+    @content
+=m
+  @media (min-width: 900px) and (max-width: 1023px) 
+    @content
+=s
+  @media (min-width: 768px) and (max-width: 899px) 
+    @content
+=xs
+  @media (max-width: 767px)
+    @content
 
-$xl = min-width: 1192px
-$l = min-width: 1024px
-$m = min-width: 900px
-$s = min-width: 768px
-$xs = min-width: 0px
 
-
-+break($xl)
-  // Sans
-  .sans-7
+.sans-7
+  +xl
     +sans(100pt, 100pt)
+  +l
+    +sans(80pt, 80pt)
+  +m
+    +sans(80pt, 80pt)
+  +s
+    +sans(66pt, 66pt)
+  +xs
+    +sans(46pt, 46pt)
 
-  .sans-6
+.sans-6
+  +xl
     +sans(60pt, 68pt)
-
-  .sans-5
+  +l
+    +sans(60pt, 68pt)
+  +m
+    +sans(60pt, 68pt)
+  +s
+    +sans(56pt, 64pt)
+  +xs
     +sans(40pt, 46pt)
 
-  .sans-4
-    +sans(30pt, 34pt)
-
-  .sans-3
-    +sans(20pt, 30pt)
-  .sans-3t
-    +sans(20pt, 24pt)
-
-  .sans-2
-    +sans(16pt, 24pt)
-  .sans-2t
-    +sans(16pt, 20pt)
-
-  .sans-1
-    +sans(12pt, 18pt)
-  .sans-1t
-    +sans(12pt, 16pt)
-
-  .sans-0
-    +sans(10pt, 14pt)
-  .sans-0t
-    +sans(10pt, 12pt)
-
-  // Serif
-  .serif-7
-    +serif(100pt, 110pt)
-
-  .serif-6
-    +serif(66pt, 68pt)
-
-  .serif-5
-    +serif(44pt, 46pt)
-
-  .serif-4
-    +serif(32pt, 34pt)
-
-  .serif-3
-    +serif(22pt, 30pt)
-  .serif-3t
-    +serif(22pt, 24pt)
-
-  .serif-2
-    +serif(18pt, 24pt)
-  .serif-2t
-    +serif(18pt, 20pt)
-
-  .serif-1
-    +serif(14pt, 18pt)
-  .serif-1t
-    +serif(14pt, 16pt)
-
-  .serif-0
-    +serif(10pt, 14pt)
-  .serif-0t
-    +serif(10pt, 12pt)
-
-
-+break($l)
-  // Sans
-  .sans-7
-    +sans(80pt, 100pt)
-
-  .sans-6
+.sans-5
+  +sans(40pt, 46pt)
+  +xl
     +sans(60pt, 68pt)
-
-  .sans-5
+  +l
+    +sans(60pt, 68pt)
+  +m
+    +sans(60pt, 68pt)
+  +s
+    +sans(56pt, 64pt)
+  +xs
     +sans(40pt, 46pt)
 
-  .sans-4
-    +sans(30pt, 34pt)
+.sans-4
+  +sans(30pt, 34pt)
 
-  .sans-3
-    +sans(20pt, 30pt)
-  .sans-3t
-    +sans(20pt, 24pt)
+.sans-3
+  +sans(20pt, 30pt)
+.sans-3t
+  +sans(20pt, 24pt)
 
-  .sans-2
-    +sans(16pt, 24pt)
-  .sans-2t
-    +sans(16pt, 20pt)
+.sans-2
+  +sans(16pt, 24pt)
+.sans-2t
+  +sans(16pt, 20pt)
 
-  .sans-1
-    +sans(12pt, 18pt)
-  .sans-1t
-    +sans(12pt, 16pt)
+.sans-1
+  +sans(12pt, 18pt)
+.sans-1t
+  +sans(12pt, 16pt)
 
-  .sans-0
-    +sans(10pt, 14pt)
-  .sans-0t
-    +sans(10pt, 12pt)
+.sans-0
+  +sans(10pt, 14pt)
+.sans-0t
+  +sans(10pt, 12pt)
 
-  // Serif
-  .serif-7
-    +serif(100pt, 110pt)
+// Serif
+.serif-7
+  +serif(100pt, 110pt)
 
-  .serif-6
-    +serif(66pt, 68pt)
+.serif-6
+  +serif(66pt, 68pt)
 
-  .serif-5
-    +serif(44pt, 46pt)
+.serif-5
+  +serif(44pt, 46pt)
 
-  .serif-4
-    +serif(32pt, 34pt)
+.serif-4
+  +serif(32pt, 34pt)
 
-  .serif-3
-    +serif(22pt, 30pt)
-  .serif-3t
-    +serif(22pt, 24pt)
+.serif-3
+  +serif(22pt, 30pt)
+.serif-3t
+  +serif(22pt, 24pt)
 
-  .serif-2
-    +serif(18pt, 24pt)
-  .serif-2t
-    +serif(18pt, 20pt)
+.serif-2
+  +serif(18pt, 24pt)
+.serif-2t
+  +serif(18pt, 20pt)
 
-  .serif-1
-    +serif(14pt, 18pt)
-  .serif-1t
-    +serif(14pt, 16pt)
+.serif-1
+  +serif(14pt, 18pt)
+.serif-1t
+  +serif(14pt, 16pt)
 
-  .serif-0
-    +serif(10pt, 14pt)
-  .serif-0t
-    +serif(10pt, 12pt)
-
-
-+break($m)
-  // Sans
-  .sans-7
-    +sans(100pt, 100pt)
-
-  .sans-6
-    +sans(60pt, 68pt)
-
-  .sans-5
-    +sans(40pt, 46pt)
-
-  .sans-4
-    +sans(30pt, 34pt)
-
-  .sans-3
-    +sans(20pt, 30pt)
-  .sans-3t
-    +sans(20pt, 24pt)
-
-  .sans-2
-    +sans(16pt, 24pt)
-  .sans-2t
-    +sans(16pt, 20pt)
-
-  .sans-1
-    +sans(12pt, 18pt)
-  .sans-1t
-    +sans(12pt, 16pt)
-
-  .sans-0
-    +sans(10pt, 14pt)
-  .sans-0t
-    +sans(10pt, 12pt)
-
-  // Serif
-  .serif-7
-    +serif(100pt, 110pt)
-
-  .serif-6
-    +serif(66pt, 68pt)
-
-  .serif-5
-    +serif(44pt, 46pt)
-
-  .serif-4
-    +serif(32pt, 34pt)
-
-  .serif-3
-    +serif(22pt, 30pt)
-  .serif-3t
-    +serif(22pt, 24pt)
-
-  .serif-2
-    +serif(18pt, 24pt)
-  .serif-2t
-    +serif(18pt, 20pt)
-
-  .serif-1
-    +serif(14pt, 18pt)
-  .serif-1t
-    +serif(14pt, 16pt)
-
-  .serif-0
-    +serif(10pt, 14pt)
-  .serif-0t
-    +serif(10pt, 12pt)
-
-
-+break($xs)
-  // Sans
-  .sans-7
-    +sans(100pt, 100pt)
-
-  .sans-6
-    +sans(60pt, 68pt)
-
-  .sans-5
-    +sans(40pt, 46pt)
-
-  .sans-4
-    +sans(30pt, 34pt)
-
-  .sans-3
-    +sans(20pt, 30pt)
-  .sans-3t
-    +sans(20pt, 24pt)
-
-  .sans-2
-    +sans(16pt, 24pt)
-  .sans-2t
-    +sans(16pt, 20pt)
-
-  .sans-1
-    +sans(12pt, 18pt)
-  .sans-1t
-    +sans(12pt, 16pt)
-
-  .sans-0
-    +sans(10pt, 14pt)
-  .sans-0t
-    +sans(10pt, 12pt)
-
-  // Serif
-  .serif-7
-    +serif(100pt, 110pt)
-
-  .serif-6
-    +serif(66pt, 68pt)
-
-  .serif-5
-    +serif(44pt, 46pt)
-
-  .serif-4
-    +serif(32pt, 34pt)
-
-  .serif-3
-    +serif(22pt, 30pt)
-  .serif-3t
-    +serif(22pt, 24pt)
-
-  .serif-2
-    +serif(18pt, 24pt)
-  .serif-2t
-    +serif(18pt, 20pt)
-
-  .serif-1
-    +serif(14pt, 18pt)
-  .serif-1t
-    +serif(14pt, 16pt)
-
-  .serif-0
-    +serif(10pt, 14pt)
-  .serif-0t
-    +serif(10pt, 12pt)
-
-+break($xs)
-    // Sans
-    .sans-7
-      +sans(46pt, 50pt)
-
-    .sans-6
-      +sans(40pt, 68pt)
-
-    .sans-5
-      +sans(30pt, 46pt)
-
-    .sans-4
-      +sans(24pt, 34pt)
-
-    .sans-3
-      +sans(16pt, 24pt)
-    .sans-3t
-      +sans(16pt, 20pt)
-
-    .sans-2
-      +sans(14pt, 20pt)
-    .sans-2t
-      +sans(14pt, 18pt)
-
-    .sans-1
-      +sans(12pt, 18pt)
-    .sans-1t
-      +sans(12pt, 16pt)
-
-    .sans-0
-      +sans(10pt, 14pt)
-    .sans-0t
-      +sans(10pt, 12pt)
-
-    // Serif
-    .serif-7
-      +serif(100pt, 110pt)
-
-    .serif-6
-      +serif(66pt, 68pt)
-
-    .serif-5
-      +serif(44pt, 46pt)
-
-    .serif-4
-      +serif(32pt, 34pt)
-
-    .serif-3
-      +serif(22pt, 30pt)
-    .serif-3t
-      +serif(22pt, 24pt)
-
-    .serif-2
-      +serif(18pt, 24pt)
-    .serif-2t
-      +serif(18pt, 20pt)
-
-    .serif-1
-      +serif(14pt, 18pt)
-    .serif-1t
-      +serif(14pt, 16pt)
-
-    .serif-0
-      +serif(10pt, 14pt)
-    .serif-0t
-      +serif(10pt, 12pt)
+.serif-0
+  +serif(10pt, 14pt)
+.serif-0t
+  +serif(10pt, 12pt)
