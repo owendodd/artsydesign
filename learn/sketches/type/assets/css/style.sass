@@ -10,7 +10,8 @@
 body
   width: 100%
   padding: 0
-  margin: 0
+  margin: 0 auto
+  max-width: 1400px
 p
   margin: 0
 
@@ -20,22 +21,30 @@ h1
 // Layout
 section
   background-color: #e5e5e5
-  padding: 10px 15px
+  padding: 0 5px
   margin: 20px
-  min-height: 200px
   display: flex
   justify-content: space-between
+  @media (max-width: 767px)
+    flex-wrap: wrap
 
 .step
-  display: flex
-  flex-direction: column
-  justify-content: space-between
-  flex-grow: 1
+  display: block
+  padding: 10px
+  @media (max-width: 767px)
+    margin-bottom: 40px
+
 
 .step-class
   font-family: "Unica77LLWebRegular", helvetica, sans-serif
   font-size: 12pt
   font-weight: normal
   line-height: 18pt
+  margin-bottom: 60px
+  @media (max-width: 767px)
+    margin-bottom: 20px
+
+.step-class-meta
+  padding-left: 30px
 
 @import 'type'
