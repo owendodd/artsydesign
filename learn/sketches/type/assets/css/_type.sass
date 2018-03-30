@@ -1,0 +1,183 @@
+// Type Mixins
+=sans($size, $line)
+  font-family: "Unica77LLWebRegular", helvetica, sans-serif
+  font-weight: normal
+  font-size: $size
+  line-height: $line
+  .step-class-meta::after
+    content: " #{$size}/#{$line}"
+
+=serif($size, $line)
+  font-family: "Adobe Garamond W08", times, serif
+  font-weight: normal
+  font-size: $size
+  line-height: $line
+  .step-class-meta::after
+    content: " #{$size}/#{$line}"
+  
+
+// Breakpoint Mixins
+
+=xl
+  @media (min-width: 1192px) 
+    @content
+=l
+  @media (min-width: 1024px) and (max-width: 1191px)
+    @content
+=m
+  @media (min-width: 900px) and (max-width: 1023px) 
+    @content
+=s
+  @media (min-width: 768px) and (max-width: 899px) 
+    @content
+=xs
+  @media (max-width: 767px)
+    @content
+
+
+.sans-7
+  +xl
+    +sans(100pt, 100pt)
+  +l
+    +sans(80pt, 80pt)
+  +m
+    +sans(80pt, 80pt)
+  +s
+    +sans(66pt, 66pt)
+  +xs
+    +sans(46pt, 46pt)
+
+
+.sans-6
+  +xl
+    +sans(60pt, 68pt)
+  +l
+    +sans(60pt, 68pt)
+  +m
+    +sans(60pt, 68pt)
+  +s
+    +sans(56pt, 64pt)
+  +xs
+    +sans(40pt, 46pt)
+
+
+.sans-5
+  +xl
+    +sans(40pt, 46pt)
+  +l
+    +sans(40pt, 46pt)
+  +m
+    +sans(40pt, 34pt)
+  +s
+    +sans(30pt, 34pt)
+  +xs
+    +sans(30pt, 34pt)
+
+
+.sans-4
+  +xl
+    +sans(30pt, 34pt)
+  +l
+    +sans(30pt, 34pt)
+  +m
+    +sans(30pt, 34pt)
+  +s
+    +sans(24pt, 24pt)
+  +xs
+    +sans(24pt, 24pt)
+
+
+.sans-3
+  +xl
+    +sans(20pt, 30pt)
+  +l
+    +sans(20pt, 30pt)
+  +m
+    +sans(20pt, 30pt)
+  +s
+    +sans(18pt, 28pt)
+  +xs
+    +sans(18pt, 28pt)
+.sans-3t
+  +xl
+    +sans(20pt, 24pt)
+  +l
+    +sans(20pt, 24pt)
+  +m
+    +sans(20pt, 24pt)
+  +s
+    +sans(18pt, 22pt)
+  +xs
+    +sans(18pt, 22pt)
+
+
+.sans-2
+  +xl
+    +sans(16pt, 24pt)
+  +l
+    +sans(16pt, 24pt)
+  +m
+    +sans(16pt, 24pt)
+  +s
+    +sans(14pt, 20pt)
+  +xs
+    +sans(14pt, 20pt)
+.sans-2t
+  +xl
+    +sans(16pt, 20pt)
+  +l
+    +sans(16pt, 20pt)
+  +m
+    +sans(16pt, 24pt)
+  +s
+    +sans(14pt, 16pt)
+  +xs
+    +sans(14pt, 16pt)
+
+
+.sans-1
+  +xl
+    +sans(12pt, 18pt)
+  +l
+    +sans(12pt, 18pt)
+  +m
+    +sans(12pt, 18pt)
+  +s
+    +sans(10pt, 14pt)
+  +xs
+    +sans(10pt, 14pt)
+.sans-1t
+  +xl
+    +sans(12pt, 14pt)
+  +l
+    +sans(12pt, 14pt)
+  +m
+    +sans(12pt, 14pt)
+  +s
+    +sans(10pt, 12pt)
+  +xs
+    +sans(10pt, 12pt)
+
+
+.sans-0
+  +xl
+    +sans(10pt, 14pt)
+  +l
+    +sans(10pt, 14pt)
+  +m
+    +sans(10pt, 14pt)
+  +s
+    +sans(8pt, 12pt)
+  +xs
+    +sans(8pt, 12pt)
+.sans-0t
+  +xl
+    +sans(10pt, 12pt)
+  +l
+    +sans(10pt, 12pt)
+  +m
+    +sans(10pt, 12pt)
+  +s
+    +sans(8pt, 10pt)
+  +xs
+    +sans(8pt, 10pt)

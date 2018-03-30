@@ -1,0 +1,50 @@
+// Mixins
+@mixin p($property, $val)
+  -webkit-#{$property}: $val
+  -moz-#{$property}: $val
+  -ms-#{$property}: $val
+  #{$property}: $val
+
+
+// Basics
+body
+  width: 100%
+  padding: 0
+  margin: 0 auto
+  max-width: 1400px
+p
+  margin: 0
+
+h1
+  margin: 0
+
+// Layout
+section
+  background-color: #e5e5e5
+  padding: 0 5px
+  margin: 20px
+  display: flex
+  justify-content: space-between
+  @media (max-width: 767px)
+    flex-wrap: wrap
+
+.step
+  display: block
+  padding: 10px
+  @media (max-width: 767px)
+    margin-bottom: 40px
+
+
+.step-class
+  font-family: "Unica77LLWebRegular", helvetica, sans-serif
+  font-size: 12pt
+  font-weight: normal
+  line-height: 18pt
+  margin-bottom: 60px
+  @media (max-width: 767px)
+    margin-bottom: 20px
+
+.step-class-meta
+  padding-left: 30px
+
+@import 'type'
