@@ -25,12 +25,13 @@ h1
   font-size: 12pt
   font-weight: normal
   width: 100vh
-  +p(transform, rotate(90deg) translateY(10px))
+  +p(transform, rotate(90deg) translateY(15px))
   +p(transform-origin, 0% 0%)
   pointer-events: none
   border-top: 1px solid blue
   line-height: 18pt
   position: fixed
+  padding-left: 4px
   color: blue
   top: 0
 
@@ -46,6 +47,7 @@ h1
 .s
   left: 768px
 
+
 // Layout
 section
   background-color: #e5e5e5
@@ -59,11 +61,14 @@ section
 .step
   display: block
   padding: 10px
-  width: 50%
+  width: 100%
   @media (max-width: 767px)
     margin-bottom: 20px
-    width: 100%
 
+.half
+   max-width: 50%
+   @media (max-width: 767px)
+    max-width: 100%
 
 .step-class
   font-family: "Unica77LLWebRegular", helvetica, sans-serif
