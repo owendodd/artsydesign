@@ -10,13 +10,38 @@
 body
   width: 100%
   padding: 0
-  margin: 0 auto
-  max-width: 1400px
+  margin: 0
+
 p
   margin: 0
 
 h1
   margin: 0
+
+
+// Header
+.break
+  font-family: "Unica77LLWebRegular", helvetica, sans-serif
+  font-size: 12pt
+  font-weight: normal
+  line-height: 18pt
+  position: fixed
+  color: blue
+  top: 5px
+  +p(transform, rotate(90deg))
+  +p(transform-origin, 0% 0%)
+
+.xl
+  left: 1192px
+
+.l
+  left: 1024px
+
+.m
+  left: 900px
+
+.s
+  left: 768px
 
 // Layout
 section
@@ -31,8 +56,10 @@ section
 .step
   display: block
   padding: 10px
+  width: 50%
   @media (max-width: 767px)
     margin-bottom: 40px
+    width: 100%
 
 
 .step-class
