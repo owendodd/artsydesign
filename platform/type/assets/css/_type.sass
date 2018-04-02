@@ -1,0 +1,604 @@
+// Type Mixins
+=render($size, $line)
+  font-size: $size
+  line-height: $line
+  .step-class-meta:after
+    content: " #{$size}/#{$line}"
+  
+
+// Breakpoint Mixins
+  
+
+=xl
+  @media (min-width: 1192px) 
+    @content
+=l
+  @media (min-width: 1024px) and (max-width: 1191px)
+    @content
+=m
+  @media (min-width: 900px) and (max-width: 1023px) 
+    @content
+=s
+  @media (min-width: 768px) and (max-width: 899px) 
+    @content
+=xs
+  @media (max-width: 767px)
+    @content
+
+.step.sans
+  font-family: "Unica77LLWebRegular", helvetica, sans-serif
+  .step-class-meta:before
+    content: 'Unica77'
+.step.serif
+  font-family: "Adobe Garamond W08", times, serif
+  .step-class-meta:before
+    content: 'Garamond'
+.step.display
+  font-family: "Unica77LLWebRegular", helvetica, sans-serif
+  .step-class-meta:before
+    content: 'Avant Garde'
+
+.step-7.sans
+  .step-class:before
+    content: 'sans-7'
+.step-7.serif
+  .step-class:before
+    content: 'serif-7'
+.step-7.display
+  .step-class:before
+    content: 'display-7'
+
+.step-6.sans
+  .step-class:before
+    content: 'sans-6'
+.step-6.serif
+  .step-class:before
+    content: 'serif-6'
+.step-6.display
+  .step-class:before
+    content: 'display-6'
+
+.step-5.sans
+  .step-class:before
+    content: 'sans-5'
+.step-5.serif
+  .step-class:before
+    content: 'serif-5'
+.step-5.display
+  .step-class:before
+    content: 'display-5'
+
+.step-4.sans
+  .step-class:before
+    content: 'sans-4'
+.step-4.serif
+  .step-class:before
+    content: 'serif-4'
+.step-4.display
+  .step-class:before
+    content: 'display-4'
+
+.step-3.sans
+  .step-class:before
+    content: 'sans-3'
+.step-3.serif
+  .step-class:before
+    content: 'serif-3'
+.step-3.display
+  .step-class:before
+    content: 'display-3'
+
+.step-3t.sans
+  .step-class:before
+    content: 'sans-3t'
+.step-3t.serif
+  .step-class:before
+    content: 'serif-3t'
+.step-3t.display
+  .step-class:before
+    content: 'display-3t'
+
+.step-2.sans
+  .step-class:before
+    content: 'sans-2'
+.step-2.serif
+  .step-class:before
+    content: 'serif-2'
+.step-2.display
+  .step-class:before
+    content: 'display-2'
+
+.step-2t.sans
+  .step-class:before
+    content: 'sans-2t'
+.step-2t.serif
+  .step-class:before
+    content: 'serif-2t'
+.step-2t.display
+  .step-class:before
+    content: 'display-2t'
+
+.step-1.sans
+  .step-class:before
+    content: 'sans-1'
+.step-1.serif
+  .step-class:before
+    content: 'serif-1'
+.step-1.display
+  .step-class:before
+    content: 'display-1'
+
+.step-1t.sans
+  .step-class:before
+    content: 'sans-1t'
+.step-1t.serif
+  .step-class:before
+    content: 'serif-1t'
+.step-1t.display
+  .step-class:before
+    content: 'display-1t'
+
+.step-0.sans
+  .step-class:before
+    content: 'sans-0'
+.step-0.serif
+  .step-class:before
+    content: 'serif-0'
+.step-0.display
+  .step-class:before
+    content: 'display-0'
+
+.step-0t.sans
+  .step-class:before
+    content: 'sans-0t'
+.step-0t.serif
+  .step-class:before
+    content: 'serif-0t'
+.step-0t.display
+  .step-class:before
+    content: 'display-0t'
+
+  
+.step-7
+  +xl
+    &.sans
+      +render(100pt, 100pt)
+    &.serif
+      +render(100pt, 100pt)
+    &.display
+      +render(100pt, 100pt)
+  +l
+    &.sans
+      +render(80pt, 80pt)
+    &.serif
+      +render(80pt, 80pt)
+    &.display
+      +render(80pt, 80pt)
+  +m
+    &.sans
+      +render(66pt, 66pt)
+    &.serif
+      +render(66pt, 66pt)
+    &.display
+      +render(66pt, 66pt)
+  +s
+    &.sans
+      +render(66pt, 66pt)
+    &.serif
+      +render(66pt, 66pt)
+    &.display
+      +render(66pt, 66pt)
+  +xs
+    &.sans
+      +render(46pt, 46pt)
+    &.serif
+      +render(46pt, 46pt)
+    &.display
+      +render(46pt, 46pt)
+
+.step-6
+  +xl
+    &.sans
+      +render(60pt, 68pt)
+    &.serif
+      +render(60pt, 68pt)
+    &.display
+      +render(60pt, 68pt)
+  +l
+    &.sans
+      +render(60pt, 68pt)
+    &.serif
+      +render(60pt, 68pt)
+    &.display
+      +render(60pt, 68pt)
+  +m
+    &.sans
+      +render(60pt, 68pt)
+    &.serif
+      +render(60pt, 68pt)
+    &.display
+      +render(60pt, 68pt)
+  +s
+    &.sans
+      +render(56pt, 64pt)
+    &.serif
+      +render(56pt, 64pt)
+    &.display
+      +render(56pt, 64pt)
+  +xs
+    &.sans
+      +render(40pt, 46pt)
+    &.serif
+      +render(40pt, 46pt)
+    &.display
+      +render(40pt, 46pt)
+
+.step-5
+  +xl
+    &.sans
+      +render(40pt, 46pt)
+    &.serif
+      +render(40pt, 46pt)
+    &.display
+      +render(40pt, 46pt)
+  +l
+    &.sans
+      +render(40pt, 46pt)
+    &.serif
+      +render(40pt, 46pt)
+    &.display
+      +render(40pt, 46pt)
+  +m
+    &.sans
+      +render(40pt, 46pt)
+    &.serif
+      +render(40pt, 46pt)
+    &.display
+      +render(40pt, 46pt)
+  +s
+    &.sans
+      +render(30pt, 34pt)
+    &.serif
+      +render(30pt, 34pt)
+    &.display
+      +render(30pt, 34pt)
+  +xs
+    &.sans
+      +render(30pt, 34pt)
+    &.serif
+      +render(30pt, 34pt)
+    &.display
+      +render(30pt, 34pt)
+
+.step-4
+  +xl
+    &.sans
+      +render(30pt, 34pt)
+    &.serif
+      +render(30pt, 34pt)
+    &.display
+      +render(30pt, 34pt)
+  +l
+    &.sans
+      +render(30pt, 34pt)
+    &.serif
+      +render(30pt, 34pt)
+    &.display
+      +render(30pt, 34pt)
+  +m
+    &.sans
+      +render(30pt, 34pt)
+    &.serif
+      +render(30pt, 34pt)
+    &.display
+      +render(30pt, 34pt)
+  +s
+    &.sans
+      +render(24pt, 24pt)
+    &.serif
+      +render(24pt, 24pt)
+    &.display
+      +render(24pt, 24pt)
+  +xs
+    &.sans
+      +render(24pt, 24pt)
+    &.serif
+      +render(24pt, 24pt)
+    &.display
+      +render(24pt, 24pt)
+
+.step-3
+  +xl
+    &.sans
+      +render(20pt, 30pt)
+    &.serif
+      +render(20pt, 30pt)
+    &.display
+      +render(20pt, 30pt)
+  +l
+    &.sans
+      +render(20pt, 30pt)
+    &.serif
+      +render(20pt, 30pt)
+    &.display
+      +render(20pt, 30pt)
+  +m
+    &.sans
+      +render(20pt, 30pt)
+    &.serif
+      +render(20pt, 30pt)
+    &.display
+      +render(20pt, 30pt)
+  +s
+    &.sans
+      +render(18pt, 28pt)
+    &.serif
+      +render(18pt, 28pt)
+    &.display
+      +render(18pt, 28pt)
+  +xs
+    &.sans
+      +render(18pt, 28pt)
+    &.serif
+      +render(18pt, 28pt)
+    &.display
+      +render(18pt, 28pt)
+
+.step-3t
+  +xl
+    &.sans
+      +render(20pt, 24pt)
+    &.serif
+      +render(20pt, 24pt)
+    &.display
+      +render(20pt, 24pt)
+  +l
+    &.sans
+      +render(20pt, 24pt)
+    &.serif
+      +render(20pt, 24pt)
+    &.display
+      +render(20pt, 24pt)
+  +m
+    &.sans
+      +render(20pt, 24pt)
+    &.serif
+      +render(20pt, 24pt)
+    &.display
+      +render(20pt, 24pt)
+  +s
+    &.sans
+      +render(18pt, 22pt)
+    &.serif
+      +render(18pt, 22pt)
+    &.display
+      +render(18pt, 22pt)
+  +xs
+    &.sans
+      +render(18pt, 22pt)
+    &.serif
+      +render(18pt, 22pt)
+    &.display
+      +render(18pt, 22pt)
+
+.step-2
+  +xl
+    &.sans
+      +render(16pt, 24pt)
+    &.serif
+      +render(16pt, 24pt)
+    &.display
+      +render(16pt, 24pt)
+  +l
+    &.sans
+      +render(16pt, 24pt)
+    &.serif
+      +render(16pt, 24pt)
+    &.display
+      +render(16pt, 24pt)
+  +m
+    &.sans
+      +render(16pt, 24pt)
+    &.serif
+      +render(16pt, 24pt)
+    &.display
+      +render(16pt, 24pt)
+  +s
+    &.sans
+      +render(14pt, 20pt)
+    &.serif
+      +render(14pt, 20pt)
+    &.display
+      +render(14pt, 20pt)
+  +xs
+    &.sans
+      +render(14pt, 20pt)
+    &.serif
+      +render(14pt, 20pt)
+    &.display
+      +render(14pt, 20pt)
+
+.step-2t
+  +xl
+    &.sans
+      +render(16pt, 20pt)
+    &.serif
+      +render(16pt, 20pt)
+    &.display
+      +render(16pt, 20pt)
+  +l
+    &.sans
+      +render(16pt, 20pt)
+    &.serif
+      +render(16pt, 20pt)
+    &.display
+      +render(16pt, 20pt)
+  +m
+    &.sans
+      +render(16pt, 20pt)
+    &.serif
+      +render(16pt, 20pt)
+    &.display
+      +render(16pt, 20pt)
+  +s
+    &.sans
+      +render(14pt, 16pt)
+    &.serif
+      +render(14pt, 16pt)
+    &.display
+      +render(14pt, 16pt)
+  +xs
+    &.sans
+      +render(14pt, 16pt)
+    &.serif
+      +render(14pt, 16pt)
+    &.display
+      +render(14pt, 16pt)
+
+.step-1
+  +xl
+    &.sans
+      +render(12pt, 18pt)
+    &.serif
+      +render(12pt, 18pt)
+    &.display
+      +render(12pt, 18pt)
+  +l
+    &.sans
+      +render(12pt, 18pt)
+    &.serif
+      +render(12pt, 18pt)
+    &.display
+      +render(12pt, 18pt)
+  +m
+    &.sans
+      +render(12pt, 18pt)
+    &.serif
+      +render(12pt, 18pt)
+    &.display
+      +render(12pt, 18pt)
+  +s
+    &.sans
+      +render(10pt, 14pt)
+    &.serif
+      +render(10pt, 14pt)
+    &.display
+      +render(10pt, 14pt)
+  +xs
+    &.sans
+      +render(10pt, 14pt)
+    &.serif
+      +render(10pt, 14pt)
+    &.display
+      +render(10pt, 14pt)
+
+.step-1t
+  +xl
+    &.sans
+      +render(12pt, 14pt)
+    &.serif
+      +render(12pt, 14pt)
+    &.display
+      +render(12pt, 14pt)
+  +l
+    &.sans
+      +render(12pt, 14pt)
+    &.serif
+      +render(12pt, 14pt)
+    &.display
+      +render(12pt, 14pt)
+  +m
+    &.sans
+      +render(12pt, 14pt)
+    &.serif
+      +render(12pt, 14pt)
+    &.display
+      +render(12pt, 14pt)
+  +s
+    &.sans
+      +render(10pt, 12pt)
+    &.serif
+      +render(10pt, 12pt)
+    &.display
+      +render(10pt, 12pt)
+  +xs
+    &.sans
+      +render(10pt, 12pt)
+    &.serif
+      +render(10pt, 12pt)
+    &.display
+      +render(10pt, 12pt)
+
+.step-0
+  +xl
+    &.sans
+      +render(10pt, 14pt)
+    &.serif
+      +render(10pt, 14pt)
+    &.display
+      +render(10pt, 14pt)
+  +l
+    &.sans
+      +render(10pt, 14pt)
+    &.serif
+      +render(10pt, 14pt)
+    &.display
+      +render(10pt, 14pt)
+  +m
+    &.sans
+      +render(10pt, 14pt)
+    &.serif
+      +render(10pt, 14pt)
+    &.display
+      +render(10pt, 14pt)
+  +s
+    &.sans
+      +render(8pt, 12pt)
+    &.serif
+      +render(8pt, 12pt)
+    &.display
+      +render(8pt, 12pt)
+  +xs
+    &.sans
+      +render(8pt, 12pt)
+    &.serif
+      +render(8pt, 12pt)
+    &.display
+      +render(8pt, 12pt)
+
+.step-0t
+  +xl
+    &.sans
+      +render(10pt, 12pt)
+    &.serif
+      +render(10pt, 12pt)
+    &.display
+      +render(10pt, 12pt)
+  +l
+    &.sans
+      +render(10pt, 12pt)
+    &.serif
+      +render(10pt, 12pt)
+    &.display
+      +render(10pt, 12pt)
+  +m
+    &.sans
+      +render(10pt, 12pt)
+    &.serif
+      +render(10pt, 12pt)
+    &.display
+      +render(10pt, 12pt)
+  +s
+    &.sans
+      +render(8pt, 10pt)
+    &.serif
+      +render(8pt, 10pt)
+    &.display
+      +render(8pt, 10pt)
+  +xs
+    &.sans
+      +render(8pt, 10pt)
+    &.serif
+      +render(8pt, 10pt)
+    &.display
+      +render(8pt, 10pt)
