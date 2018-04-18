@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ReactTooltip from "simple-react-tooltip";
+import ReactTooltip from "react-tooltip";
 import { Body, Link } from "./AppStyles";
 
 class App extends Component {

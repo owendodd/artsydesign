@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { injectGlobal } from 'styled-components';
-import 'react-tippy/dist/tippy.css';
 
 export const Body = styled.div`
   text-align: left;
@@ -23,4 +22,4 @@ injectGlobal`
   @import url('https://webfonts.artsy.net/unica-webfonts.css');
   @import url('https://webfonts.artsy.net/force-webfonts.css?a=b');
   }
-`
+` 
