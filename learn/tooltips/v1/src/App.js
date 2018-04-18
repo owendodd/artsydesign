@@ -24,15 +24,10 @@ class App extends Component {
           mollis ornare vel eu leo.
         </Body>
 
-        <ReactTooltip id="nick" aria-haspopup="true" effect='solid'>
-          <p>This is a global react component tooltip</p>
-          <p>You can put every thing here</p>
-          <ul>
-            <li>Word</li>
-            <li>Chart</li>
-            <li>Else</li>
-          </ul>
+        <ReactTooltip className="custom" id="nick" aria-haspopup="true" effect='solid'>
+          <p>Nick Mauss was here</p>
         </ReactTooltip>
+
       </div>
     );
   }

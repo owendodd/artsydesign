@@ -13,6 +13,7 @@ export const Body = styled.div`
 
 export const Link = styled.span`
   text-decoration: underline;
+  width: auto;
   text-decoration-style: dashed;
   cursor: pointer;
 `;
