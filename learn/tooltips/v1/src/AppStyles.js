@@ -15,8 +15,8 @@ export default styled.div`
     text-decoration: underline;
     width: auto;
     display: inline-block;
-    text-decoration-style: dashed;
-    cursor: pointer;
+      text-decoration-style: dashed;
+      cursor: pointer;
   }
 
   .__react_component_tooltip {
