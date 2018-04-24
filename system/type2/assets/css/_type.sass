@@ -7,30 +7,42 @@
   
 
 =underline ($sizeX, $sizeY)
-  background-image: linear-gradient(transparent 0px, rgb(0, 0, 0) 1px, transparent 0px)
-  background-size: $sizeX $sizeY
-  background-repeat: repeat-x
-  background-position: center bottom
+  // background-image: linear-gradient(transparent 0px, rgb(0, 0, 0) 1px, transparent 0px)
+  // background-size: $sizeX $sizeY
+  // background-repeat: repeat-x
+  // background-position: center bottom
+  // cursor: pointer
+  // transition: all 250ms
+  position: relative
   cursor: pointer
-  transition: all 250ms
+  padding-bottom: 2px
+  text-decoration: none
+  &::after
+    content: ""
+    position: absolute
+    bottom: $sizeX
+    left: 0
+    height: $sizeY
+    width: 100%
+    background: #000
+    background: linear-gradient(left, transparent 0%,#000 50%,transparent 100%)
   &:hover
     opacity: 0.6
-  
 
 
 // Underline Values
 
 .sans
   .u1
-    +underline(1em, 0.12em)
+    +underline(0.09em, 0.065em)
 
 .serif
   .u1
-    +underline(1em, 0.24em)
+    +underline(0.19em, 0.065em)
 
 .display
   .u1
-    +underline(1em, 0.2em)
+    +underline(0.25em, 0.04em)
 
 .u2
   text-decoration: underline
