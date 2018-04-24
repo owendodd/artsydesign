@@ -40,10 +40,21 @@
   font-family: "Unica77LLWebRegular", helvetica, sans-serif
   .step-class-meta:before
     content: 'Unica77'
+  &.ital
+    font-family: "Unica77LLWebItalic", helvetica, sans-serif
+  &.med
+    font-family: "Unica77LLWebMedium", helvetica, sans-serif
+    &.ital
+      font-family: "Unica77LLWebMediumItalic", helvetica, sans-serif !important
+  
 .step.serif
   font-family: "Adobe Garamond W08", times, serif
   .step-class-meta:before
     content: 'Garamond'
+  &.med
+    font-weight: 600
+  &.ital
+    font-style: italic
 .step.display
   font-family: "ITC Avant Garde Gothic W04", helvetica, sans-serif
   .sample
