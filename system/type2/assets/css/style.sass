@@ -1,0 +1,129 @@
+// Mixins
+@mixin p($property, $val)
+  -webkit-#{$property}: $val
+  -moz-#{$property}: $val
+  -ms-#{$property}: $val
+  #{$property}: $val
+
+
+// Basics
+body
+  width: 100%
+  padding: 0
+  margin: 0
+
+p
+  margin: 0
+
+h1
+  margin: 0
+
+
+// Header
+.break
+  font-family: "Unica77LLWebRegular", helvetica, sans-serif
+  font-size: 12pt
+  font-weight: normal
+  width: 100vh
+  +p(transform, rotate(90deg) translateY(15px))
+  +p(transform-origin, 0% 0%)
+  pointer-events: none
+  border-top: 1px solid blue
+  line-height: 18pt
+  position: fixed
+  padding-left: 4px
+  color: blue
+  top: 0
+
+.xl
+  left: 1192px
+
+.l
+  left: 1024px
+
+.m
+  left: 900px
+
+.s
+  left: 768px
+
+nav
+  display: flex
+  justify-content: space-between
+  position: fixed
+  background-color: white
+  width: 100%
+  top: 0
+
+nav ul
+  font-family: "Unica77LLWebRegular", helvetica, sans-serif
+  font-size: 12pt
+  font-weight: normal
+  display: flex
+  margin: 0
+  padding: 0
+  li
+    list-style: none
+    cursor: pointer
+    display: block
+    margin: 20px 0 20px 20px
+    padding: 10px
+    border: 1px solid black
+    border-radius: 4px
+    &:hover
+      color: white
+      background-color: black
+
+nav ul:last-child
+  li
+    margin: 20px 20px 20px 0
+
+.active
+  color: white
+  background-color: black
+    
+
+
+// Layout
+section
+  background-color: #e5e5e5
+  padding: 0 5px
+  margin: 20px
+  display: flex
+  justify-content: space-between
+  &:first-of-type
+    margin-top: 78px
+  @media (max-width: 767px)
+    flex-wrap: wrap
+
+.step
+  display: block
+  padding: 10px
+  width: 100%
+  @media (max-width: 767px)
+    margin-bottom: 20px
+
+.half
+   max-width: 50%
+   @media (max-width: 767px)
+    max-width: 100%
+
+.step-class
+  font-family: "Unica77LLWebRegular", helvetica, sans-serif
+  font-size: 12pt
+  font-weight: normal
+  line-height: 18pt
+  margin-bottom: 60px
+  @media (max-width: 767px)
+    margin-bottom: 20px
+
+.sample
+  overflow: hidden
+  display: -webkit-box
+  -webkit-line-clamp: 2
+  -webkit-box-orient: vertical
+
+.step-class-meta
+  padding-left: 30px
+
+@import 'type'

@@ -1,0 +1,321 @@
+// Type Mixins
+=render($size, $line)
+  font-size: $size
+  line-height: $line
+  .step-class-meta:after
+    content: " #{$size}/#{$line}"
+  
+
+=underline ($sizeX, $sizeY)
+  background-image: linear-gradient(transparent 0px, rgb(0, 0, 0) 1px, transparent 0px)
+  background-size: $sizeX $sizeY
+  background-repeat: repeat-x
+  background-position: center bottom
+  cursor: pointer
+  transition: all 250ms
+  &:hover
+    opacity: 0.6
+  
+
+
+// Underline Values
+
+.sans
+  .u
+    +underline(1em, 0.12em)
+
+.serif
+  .u
+    +underline(1em, 0.24em)
+
+.display
+  .u
+    +underline(1em, 0.2em)
+
+
+
+
+// Type Prefixes 
+.step.sans
+  font-family: "Unica77LLWebRegular", helvetica, sans-serif
+  .step-class-meta:before
+    content: 'Unica77'
+  &.ital
+    font-family: "Unica77LLWebItalic", helvetica, sans-serif
+  &.med
+    font-family: "Unica77LLWebMedium", helvetica, sans-serif
+    &.ital
+      font-family: "Unica77LLWebMediumItalic", helvetica, sans-serif !important
+  
+.step.serif
+  font-family: "Adobe Garamond W08", times, serif
+  .step-class-meta:before
+    content: 'Garamond'
+  &.med
+    font-weight: 600
+  &.ital
+    font-style: italic
+.step.display
+  font-family: "ITC Avant Garde Gothic W04", helvetica, sans-serif
+  .sample
+    text-transform: uppercase
+    letter-spacing: 0.045em
+  .step-class-meta:before
+    content: 'Avant Garde'
+
+.step-16.sans
+  .step-class:before
+    content: 'sans-16'
+.step-16.serif
+  .step-class:before
+    content: 'serif-16'
+.step-16.display
+  .step-class:before
+    content: 'display-16'
+
+.step-14.sans
+  .step-class:before
+    content: 'sans-14'
+.step-14.serif
+  .step-class:before
+    content: 'serif-14'
+.step-14.display
+  .step-class:before
+    content: 'display-14'
+
+.step-12.sans
+  .step-class:before
+    content: 'sans-12'
+.step-12.serif
+  .step-class:before
+    content: 'serif-12'
+.step-12.display
+  .step-class:before
+    content: 'display-12'
+
+.step-10.sans
+  .step-class:before
+    content: 'sans-10'
+.step-10.serif
+  .step-class:before
+    content: 'serif-10'
+.step-10.display
+  .step-class:before
+    content: 'display-10'
+
+.step-8.sans
+  .step-class:before
+    content: 'sans-8'
+.step-8.serif
+  .step-class:before
+    content: 'serif-8'
+.step-8.display
+  .step-class:before
+    content: 'display-8'
+
+.step-6.sans
+  .step-class:before
+    content: 'sans-6'
+.step-6.serif
+  .step-class:before
+    content: 'serif-6'
+.step-6.display
+  .step-class:before
+    content: 'display-6'
+
+.step-5.sans
+  .step-class:before
+    content: 'sans-5'
+.step-5.serif
+  .step-class:before
+    content: 'serif-5'
+.step-5.display
+  .step-class:before
+    content: 'display-5'
+
+.step-5t.sans
+  .step-class:before
+    content: 'sans-5t'
+.step-5t.serif
+  .step-class:before
+    content: 'serif-5t'
+.step-5t.display
+  .step-class:before
+    content: 'display-5t'
+
+.step-4.sans
+  .step-class:before
+    content: 'sans-4'
+.step-4.serif
+  .step-class:before
+    content: 'serif-4'
+.step-4.display
+  .step-class:before
+    content: 'display-4'
+
+.step-4t.sans
+  .step-class:before
+    content: 'sans-4t'
+.step-4t.serif
+  .step-class:before
+    content: 'serif-4t'
+.step-4t.display
+  .step-class:before
+    content: 'display-4t'
+
+.step-3.sans
+  .step-class:before
+    content: 'sans-3'
+.step-3.serif
+  .step-class:before
+    content: 'serif-3'
+.step-3.display
+  .step-class:before
+    content: 'display-3'
+
+.step-3t.sans
+  .step-class:before
+    content: 'sans-3t'
+.step-3t.serif
+  .step-class:before
+    content: 'serif-3t'
+.step-3t.display
+  .step-class:before
+    content: 'display-3t'
+
+.step-2.sans
+  .step-class:before
+    content: 'sans-2'
+.step-2.serif
+  .step-class:before
+    content: 'serif-2'
+.step-2.display
+  .step-class:before
+    content: 'display-2'
+
+.step-1.sans
+  .step-class:before
+    content: 'sans-1'
+.step-1.serif
+  .step-class:before
+    content: 'serif-1'
+.step-1.display
+  .step-class:before
+    content: 'display-1'
+
+
+
+
+// Type Sizes 
+
+.step-16
+  &.sans
+    +render(100px, 104px)
+  &.serif
+    +render(0px, 0px)
+  &.display
+    +render(0px, 0px)
+
+.step-14
+  &.sans
+    +render(80px, 84px)
+  &.serif
+    +render(0px, 0px)
+  &.display
+    +render(0px, 0px)
+
+.step-12
+  &.sans
+    +render(60px, 68px)
+  &.serif
+    +render(66px, 70px)
+  &.display
+    +render(0px, 0px)
+
+.step-10
+  &.sans
+    +render(42px, 48px)
+  &.serif
+    +render(44px, 50px)
+  &.display
+    +render(0px, 0px)
+
+.step-8
+  &.sans
+    +render(28px, 34px)
+  &.serif
+    +render(32px, 38px)
+  &.display
+    +render(22px, 24px)
+
+.step-6
+  &.sans
+    +render(22px, 30px)
+  &.serif
+    +render(26px, 32px)
+  &.display
+    +render(18px, 22px)
+
+.step-5
+  &.sans
+    +render(18px, 30px)
+  &.serif
+    +render(22px, 28px)
+  &.display
+    +render(0px, 0px)
+    
+.step-5t
+  &.sans
+    +render(18px, 26px)
+  &.serif
+    +render(22px, 32px)
+  &.display
+    +render(16px, 20px)
+
+.step-4
+  &.sans
+    +render(16px, 26px)
+  &.serif
+    +render(18px, 26px)
+  &.display
+    +render(0px, 0px)
+
+.step-4t
+  &.sans
+    +render(16px, 22px)
+  &.serif
+    +render(18px, 22px)
+  &.display
+    +render(14px, 18px)
+
+.step-3
+  &.sans
+    +render(14px, 24px)
+  &.serif
+    +render(16px, 24px)
+  &.display
+    +render(0px, 0px)
+
+.step-3t
+  &.sans
+    +render(14px, 20px)
+  &.serif
+    +render(16px, 20px)
+  &.display
+    +render(12px,16px)
+
+.step-2
+  &.sans
+    +render(12px, 16px)
+  &.serif
+    +render(14px, 18px)
+  &.display
+    +render(10px, 12px)
+
+.step-1
+  &.sans
+    +render(10px, 14px)
+  &.serif
+    +render(12px, 16px)
+  &.display
+    +render(0px, 0px)
