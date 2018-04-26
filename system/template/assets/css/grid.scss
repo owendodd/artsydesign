@@ -1,20 +1,26 @@
-
-
-
 @mixin width($cols) {
-  $width: 8.33% * $cols;
-  width: calc(#{$width} - 20px);
-  padding: 10px
+  width: 8.33% * $cols;
+  padding: 0 10px;
+}
+
+@mixin offset($offs) {
+  margin-left: 8.33% * $offs;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
 }
+
 .grid {
   width: 1132px;
   margin: 30px auto;
   display: flex; 
   flex-direction: row; 
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -31,8 +37,25 @@ body {
 .col-11 { @include width(11); }
 .col-12 { @include width(12); }
 
+.off-1  { @include offset(1); }
+.off-2  { @include offset(2); }
+.off-3  { @include offset(3); }
+.off-4  { @include offset(4); }
+.off-5  { @include offset(5); }
+.off-6  { @include offset(6); }
+.off-7  { @include offset(7); }
+.off-8  { @include offset(8); } 
+.off-9  { @include offset(9); }
+.off-10 { @include offset(10); }
+.off-11 { @include offset(11); }
+.off-12 { @include offset(12); }
 
-.test-block {
-  height: 100px;
+
+.grid div{
+  background-color: lightblue
+}
+
+.grid p {
   background-color: blue;
+  margin: 0;
 }
