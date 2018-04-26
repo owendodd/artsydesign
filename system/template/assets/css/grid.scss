@@ -1,0 +1,30 @@
+@mixin width($cols) {
+  width: 8.33% * $cols;
+  margin: 10px;
+}
+
+.grid {
+  display: flex;
+  max-width: 1212px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.col-1 { @include width(1); }
+.col-2 { @include width(2); }
+.col-3 { @include width(3); }
+.col-4 { @include width(4); }
+.col-5 { @include width(5); }
+.col-6 { @include width(6); }
+.col-7 { @include width(7); }
+.col-8 { @include width(8); }
+.col-9 { @include width(9); }
+.col-10 { @include width(10); }
+.col-11 { @include width(11); }
+.col-12 { @include width(12); }
+
+
+.test-block {
+  height: 100px;
+  background-color: blue;
+}
