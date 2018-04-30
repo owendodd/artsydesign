@@ -1,3 +1,14 @@
+$xlarge: 1192px;
+$large: 1024px;
+$medium: 900px;
+$small: 768px;
+
+@mixin break($mm, $width) {
+  @media (#{$mm}-width: $width){
+    @content
+  }
+}
+
 @mixin width($cols) {
   width: 8.33% * $cols;
   padding: 0 10px;
@@ -6,6 +17,8 @@
 @mixin offset($offs) {
   margin-left: 8.33% * $offs;
 }
+
+
 
 * {
   box-sizing: border-box;
@@ -16,7 +29,7 @@ body {
 }
 
 .grid {
-  width: 1132px;
+  max-width: 1132px;
   margin: 30px auto;
   display: flex; 
   flex-direction: row; 
@@ -50,12 +63,14 @@ body {
 .off-11 { @include offset(11); }
 .off-12 { @include offset(12); }
 
-
-.grid div{
-  background-color: lightblue
+@include break(max, $large) {
+  .col-3 { @include width(1); }
 }
 
-.grid p {
-  background-color: blue;
-  margin: 0;
-}
+
+
+.grid div {
+  background-color: lightblue;
+  height: 20px;
+  border: 2px solid white;
+} 
