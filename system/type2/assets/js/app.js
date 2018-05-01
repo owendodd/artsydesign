@@ -8,16 +8,9 @@ $('.nav').click(function() {
 $('.style-weight').click(function(){
   $(this).toggleClass('active');
   $('.step').toggleClass('med');
-
 })
 
 $('.style-italic').click(function(){
   $(this).toggleClass('active');
   $('.step').toggleClass('ital');
-})
-
-$('.style-underline').click(function(){
-  $('.nav').removeClass('active');
-  $(this).addClass('active');
-  $('.u').toggleClass('u1 u2');
 })

@@ -1,5 +1,5 @@
 // Mixins
-@mixin p($property, $val)
+@mixin vendor($property, $val)
   -webkit-#{$property}: $val
   -moz-#{$property}: $val
   -ms-#{$property}: $val
@@ -25,8 +25,8 @@ h1
   font-size: 12pt
   font-weight: normal
   width: 100vh
-  +p(transform, rotate(90deg) translateY(15px))
-  +p(transform-origin, 0% 0%)
+  +vendor(transform, rotate(90deg) translateY(15px))
+  +vendor(transform-origin, 0% 0%)
   pointer-events: none
   border-top: 1px solid blue
   line-height: 18pt
@@ -50,6 +50,7 @@ h1
 nav
   display: flex
   justify-content: space-between
+  z-index: 200
   position: fixed
   background-color: white
   width: 100%
