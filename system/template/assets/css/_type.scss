@@ -1,19 +1,10 @@
 // Type Mixins
-@mixin render($size, $line) {
+@mixin render( $size, $line) {
   font-size: $size;
   line-height: $line;
 }
 
-.u {
-  text-decoration: underline;
-
-  &:hover {
-    opacity: 0.6;
-  }
-}
-
-// Type Prefixes
-.step.sans {
+@mixin sans {
   font-family: "Unica77LLWebRegular", helvetica, sans-serif;
   &.ital {
     font-family: "Unica77LLWebItalic", helvetica, sans-serif;
@@ -26,7 +17,7 @@
   }
 }
 
-.step.serif {
+@mixin serif {
   font-family: "Adobe Garamond W08", times, serif;
   &.med {
     font-weight: 600;
@@ -36,203 +27,56 @@
   }
 }
 
-.step.display {
+@mixin display {
   font-family: "ITC Avant Garde Gothic W04", helvetica, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.045em;
 }
 
+.link {
+  text-decoration: underline;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+
+
+
 // Type Sizes
 
-.step-16 {
-  &.sans {
-    @include render(100px, 104px);
-  }
+.sans16 { @include sans; @include render(100px, 104px); }
+.sans14 { @include sans; @include render(80px, 84px); }
+.sans12 { @include sans; @include render(60px, 66px); }
+.sans10 { @include sans; @include render(42px, 48px); }
+.sans8  { @include sans; @include render(28px, 34px); }
+.sans6  { @include sans; @include render(22px, 30px); }
+.sans5t { @include sans; @include render(18px, 26px); }
+.sans5  { @include sans; @include render(18px, 30px); }
+.sans4t { @include sans; @include render(16px, 22px); }
+.sans4  { @include sans; @include render(16px, 26px); }
+.sans3t { @include sans; @include render(14px, 20px); }
+.sans3  { @include sans; @include render(14px, 24px); }
+.sans2  { @include sans; @include render(12px, 16px); }
+.sans1  { @include sans; @include render(10px, 14px); }
 
-  &.serif {
-    @include render(0px, 0px);
-  }
+.serif12 { @include serif; @include render(66px, 70px); }
+.serif10 { @include serif; @include render(44px, 50px); }
+.serif8  { @include serif; @include render(32px, 38px); }
+.serif6  { @include serif; @include render(26px, 32px); }
+.serif5t { @include serif; @include render(22px, 28px); }
+.serif5  { @include serif; @include render(22px, 32px); }
+.serif4t { @include serif; @include render(18px, 22px); }
+.serif4  { @include serif; @include render(18px, 26px); }
+.serif3t { @include serif; @include render(16px, 20px); }
+.serif3  { @include serif; @include render(16px, 24px); }
+.serif2  { @include serif; @include render(14px, 18px); }
+.serif1  { @include serif; @include render(12px, 16px); }
 
-  &.display {
-    @include render(0px, 0px);
-  }
-}
-
-.step-14 {
-  &.sans {
-    @include render(80px, 84px);
-  }
-
-  &.serif {
-    @include render(0px, 0px);
-  }
-
-  &.display {
-    @include render(0px, 0px);
-  }
-}
-
-.step-12 {
-  &.sans {
-    @include render(60px, 66px);
-  }
-
-  &.serif {
-    @include render(66px, 70px);
-  }
-
-  &.display {
-    @include render(0px, 0px);
-  }
-}
-
-.step-10 {
-  &.sans {
-    @include render(42px, 48px);
-  }
-
-  &.serif {
-    @include render(44px, 50px);
-  }
-
-  &.display {
-    @include render(0px, 0px);
-  }
-}
-
-.step-8 {
-  &.sans {
-    @include render(28px, 34px);
-  }
-
-  &.serif {
-    @include render(32px, 38px);
-  }
-
-  &.display {
-    @include render(22px, 24px);
-  }
-}
-
-.step-6 {
-  &.sans {
-    @include render(22px, 30px);
-  }
-
-  &.serif {
-    @include render(26px, 32px);
-  }
-
-  &.display {
-    @include render(18px, 22px);
-  }
-}
-
-.step-5 {
-  &.sans {
-    @include render(18px, 30px);
-  }
-
-  &.serif {
-    @include render(22px, 32px);
-  }
-
-  &.display {
-    @include render(0px, 0px);
-  }
-}
-
-.step-5t {
-  &.sans {
-    @include render(18px, 26px);
-  }
-
-  &.serif {
-    @include render(22px, 28px);
-  }
-
-  &.display {
-    @include render(16px, 20px);
-  }
-}
-
-.step-4 {
-  &.sans {
-    @include render(16px, 26px);
-  }
-
-  &.serif {
-    @include render(18px, 26px);
-  }
-
-  &.display {
-    @include render(0px, 0px);
-  }
-}
-
-.step-4t {
-  &.sans {
-    @include render(16px, 22px);
-  }
-
-  &.serif {
-    @include render(18px, 22px);
-  }
-
-  &.display {
-    @include render(14px, 18px);
-  }
-}
-
-.step-3 {
-  &.sans {
-    @include render(14px, 24px);
-  }
-  &.serif {
-    @include render(16px, 24px);
-  }
-  &.display {
-    @include render(0px, 0px);
-  }
-}
-
-.step-3t {
-  &.sans {
-    @include render(14px, 20px);
-  }
-  &.serif {
-    @include render(16px, 20px);
-  }
-
-  &.display {
-    @include render(12px, 16px);
-  }
-}
-
-.step-2 {
-  &.sans {
-    @include render(12px, 16px);
-  }
-
-  &.serif {
-    @include render(14px, 18px);
-  }
-
-  &.display {
-    @include render(10px, 12px);
-  }
-}
-
-.step-1 {
-  &.sans {
-    @include render(10px, 14px);
-  }
-
-  &.serif {
-    @include render(12px, 16px);
-  }
-
-  &.display {
-    @include render(0px, 0px);
-  }
-}
+.display8  { @include display; @include render(22px, 24px); }
+.display6  { @include display; @include render(18px, 22px); }
+.display5t { @include display; @include render(16px, 20px); }
+.display4t { @include display; @include render(14px, 18px); }
+.display3t { @include display; @include render(12px, 16px); }
+.display2  { @include display; @include render(10px, 12px); }
