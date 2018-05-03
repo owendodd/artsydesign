@@ -32,47 +32,47 @@ body {
   flex-wrap: wrap;
 }
 
-.col1  { @include width(1); }
-.col2  { @include width(2); }
-.col3  { @include width(3); }
-.col4  { @include width(4); }
-.col5  { @include width(5); }
-.col6  { @include width(6); }
-.col7  { @include width(7); }
-.col8  { @include width(8); } 
-.col9  { @include width(9); }
-.col10 { @include width(10); }
-.col11 { @include width(11); }
-.col12 { @include width(12); }
+.c1  { @include width(1); }
+.c2  { @include width(2); }
+.c3  { @include width(3); }
+.c4  { @include width(4); }
+.c5  { @include width(5); }
+.c6  { @include width(6); }
+.c7  { @include width(7); }
+.c8  { @include width(8); } 
+.c9  { @include width(9); }
+.c10 { @include width(10); }
+.c11 { @include width(11); }
+.c12 { @include width(12); }
 
 @include break(max, $large) {
-  .col1  { @include width(2); }
-  .col2  { @include width(2); }
-  .col3  { @include width(6); }
-  .col4  { @include width(6); }
-  .col5  { @include width(6); }
-  .col6  { @include width(6); }
-  .col7  { @include width(6); }
-  .col8  { @include width(8); } 
-  .col9  { @include width(8); }
-  .col10 { @include width(10); }
-  .col11 { @include width(12); }
-  .col12 { @include width(12); }
+  .c1  { @include width(2); }
+  .c2  { @include width(2); }
+  .c3  { @include width(6); }
+  .c4  { @include width(6); }
+  .c5  { @include width(6); }
+  .c6  { @include width(6); }
+  .c7  { @include width(6); }
+  .c8  { @include width(8); } 
+  .c9  { @include width(8); }
+  .c10 { @include width(10); }
+  .c11 { @include width(12); }
+  .c12 { @include width(12); }
 }
 
 @include break(max, $small) {
   .grid { padding: 0 10px; }
 
-  .col1  { @include width(6); }
-  .col2  { @include width(6); }
-  .col3  { @include width(6); }
-  .col4  { @include width(6); }
-  .col5  { @include width(6); }
-  .col6  { @include width(6); }
-  .col7  { @include width(12); }
-  .col8  { @include width(12); } 
-  .col9  { @include width(12); }
-  .col10 { @include width(12); }
-  .col11 { @include width(12); }
-  .col12 { @include width(12); }
+  .c1  { @include width(6); }
+  .c2  { @include width(6); }
+  .c3  { @include width(6); }
+  .c4  { @include width(6); }
+  .c5  { @include width(6); }
+  .c6  { @include width(6); }
+  .c7  { @include width(12); }
+  .c8  { @include width(12); } 
+  .c9  { @include width(12); }
+  .c10 { @include width(12); }
+  .c11 { @include width(12); }
+  .c12 { @include width(12); }
 }
