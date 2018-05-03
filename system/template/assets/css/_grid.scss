@@ -78,7 +78,7 @@ body {
 
   .off1  { @include offset(2); }
   .off2  { @include offset(2); }
-  .off3  { @include offset(6); }
+  .off3  { @include offset(2); }
   .off4  { @include offset(6); }
   .off5  { @include offset(6); }
   .off6  { @include offset(6); }
@@ -106,16 +106,16 @@ body {
   .col11 { @include width(12); }
   .col12 { @include width(12); }
 
-  .off1  { @include offset(6); }
-  .off2  { @include offset(6); }
-  .off3  { @include offset(6); }
-  .off4  { @include offset(6); }
+  .off1  { @include offset(0); }
+  .off2  { @include offset(0); }
+  .off3  { @include offset(0); }
+  .off4  { @include offset(0); }
   .off5  { @include offset(6); }
   .off6  { @include offset(6); }
-  .off7  { @include offset(12); }
-  .off8  { @include offset(12); } 
-  .off9  { @include offset(12); }
-  .off10 { @include offset(12); }
-  .off11 { @include offset(12); }
+  .off7  { @include offset(6); }
+  .off8  { @include offset(6); } 
+  .off9  { @include offset(6); }
+  .off10 { @include offset(6); }
+  .off11 { @include offset(6); }
   .off12 { @include offset(12); }
 }
