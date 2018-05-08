@@ -1,3 +1,10 @@
+@mixin vendor($property, $val){
+  -webkit-#{$property}: $val;
+  -moz-#{$property}: $val;
+  -ms-#{$property}: $val;
+  #{$property}: $val;
+}
+
 // Type Mixins
 @mixin render( $size, $line) {
   font-size: $size;
@@ -6,6 +13,7 @@
 
 @mixin sans {
   font-family: "Unica77LLWebRegular", helvetica, sans-serif;
+  @include vendor(font-smoothing, antialiased);
   &.ital {
     font-family: "Unica77LLWebItalic", helvetica, sans-serif;
   }
@@ -18,6 +26,7 @@
 }
 
 @mixin serif {
+  @include vendor(font-smoothing, antialiased);
   font-family: "Adobe Garamond W08", times, serif;
   &.med {
     font-weight: 600;
@@ -28,6 +37,7 @@
 }
 
 @mixin display {
+  @include vendor(font-smoothing, antialiased);
   font-family: "ITC Avant Garde Gothic W04", helvetica, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.045em;
@@ -41,6 +51,12 @@
   }
 }
 
+
+
+// Base styles
+body {
+  @extend .serif4;
+}
 
 
 

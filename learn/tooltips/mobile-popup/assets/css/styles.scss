@@ -1,0 +1,141 @@
+@import 'grid';
+@import 'type';
+@import 'colors';
+@import 'nav';
+
+$xlarge: 1192px;
+$large: 1024px;
+$medium: 900px;
+$small: 768px;
+
+@mixin break($mm, $width) {
+  @media (#{$mm}-width: $width) {
+    @content;
+  }
+}
+
+@mixin vendor($property, $val) {
+  -webkit-#{$property}: $val;
+  -moz-#{$property}: $val;
+  -ms-#{$property}: $val;
+  #{$property}: $val;
+}
+
+
+
+// Main Styles
+.content {
+  margin-top: 80px;
+}
+
+.article {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.artist-link {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  color: $black100;
+}
+
+.feedback {
+  color: $black30;
+  padding-top: 5px;
+  a {
+    text-decoration: underline;
+  }
+}
+
+.rich-tooltip {
+  width: 100%;
+  box-shadow: 0 0 15px $black30;
+  max-height: 50vh;
+  position: fixed;
+  left: 0;
+  padding: 20px;
+  background-color: white;
+  border-top: 1px solid #e5e5e5;
+  @include vendor (transition, all 400ms);
+  .title {
+    margin-top: 10px;
+    position: relative;
+  }
+  p {
+    margin: 0;
+  }
+  .bio {
+    margin-top: 5px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .follow {
+    display: inline-block;
+    color: $black100;
+    padding: 6px 15px 5px;
+    border: 1px solid #e5e5e5;
+    &:hover {
+      color: $purple100;
+    }
+  }
+
+}
+
+#adrian {
+  bottom: -330px;
+  .images {
+    img {
+      height: 143px;
+    }
+  }
+  .follow {
+    position: absolute;
+    top: 3px;
+    right: 0;
+  }
+}
+
+#joseph {
+  bottom: -200px;
+  .title{
+    display: inline-block;
+    margin-top: 3px;
+    margin-left: 10px;
+  }
+  .follow {
+    margin-top: 5px;
+    display: inline-block;
+  }
+  .image {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    background-size: auto;
+    border-radius: 50%;
+    background-image: url("../img/joseph2.jpg");
+  }
+
+}
+
+#gerhard {
+  bottom: -180px;
+  .title{
+    margin: 0 0 10px; 
+  }
+  .follow {
+    position: absolute;
+    top: 3px;
+    right: 0;
+  }
+  .bio {
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+}
+
+
+.show {
+  bottom: 0 !important;
+}
