@@ -30,6 +30,7 @@ $small: 768px;
     &.blur {
       z-index: 10;
       opacity: 0;
+      pointer-events: none;
       &.open {
         opacity: 1;
       }
@@ -70,6 +71,7 @@ $small: 768px;
   max-height: 560px;
   max-width: 440px;
   width: 100%;
+  height: auto;
   position: relative;
   opacity: 0;
   padding: 20px 40px 40px;
@@ -77,7 +79,7 @@ $small: 768px;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  @include vendor (transition, all 450ms ease-in-out);
+  @include vendor (transition, all 650ms ease-in-out);
   &.open {
     opacity: 1;
   }
@@ -114,6 +116,8 @@ $small: 768px;
 
 .hidden {
   display: none;
+}
+.off {
   opacity: 0;
 }
 
