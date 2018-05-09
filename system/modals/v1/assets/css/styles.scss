@@ -2,8 +2,7 @@ $xlarge: 1192px;
 $large: 1024px;
 $medium: 900px;
 $small: 768px;
-
-@mixin vendor($property, $val){
+@mixin vendor($property, $val) {
   -webkit-#{$property}: $val;
   -moz-#{$property}: $val;
   -ms-#{$property}: $val;
@@ -11,7 +10,7 @@ $small: 768px;
 }
 
 @mixin break($mm, $width) {
-  @media (#{$mm}-width: $width){
+  @media (#{$mm}-width: $width) {
     @content;
   }
 }
@@ -19,6 +18,114 @@ $small: 768px;
 @import 'grid';
 @import 'type';
 @import 'nav';
-
-
 // Main Styles
+.home {
+  width: 100%; // margin-top: 60px;
+  @include vendor (transition, all 250ms ease-in-out);
+  img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    &.blur {
+      z-index: 10;
+      opacity: 0;
+      &.open {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.header {
+  @include vendor (transition, all 250ms ease-in-out);
+  &.open {
+    overflow: hidden;
+    @include vendor(filter, blur(50px));
+  }
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  z-index: 100;
+  backface-visibility: hidden;
+  @include vendor (transition, all 250ms ease-in-out);
+  &.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.modal {
+  max-height: 560px;
+  max-width: 440px;
+  width: 100%;
+  position: relative;
+  opacity: 0;
+  padding: 20px 40px 40px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  @include vendor (transition, all 450ms ease-in-out);
+  &.open {
+    opacity: 1;
+  }
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  pointer-events: all;
+  justify-content: space-between;
+  opacity: 1;
+  width: 100%;
+  @include vendor (transition, all 450ms ease-in-out);
+}
+
+.close {
+  position: absolute;
+  opacity: 0.6;
+  cursor: pointer;
+  top: 20px;
+  right: 20px;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.space1 {
+  height: 400px;
+}
+
+.space2 {
+  height: 200px;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.button {
+  width: 100%;
+  padding: 16px 0;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #000;
+  @include vendor (transition, all 250ms ease-in-out);
+  &:hover {
+    background-color: #6e1fff;
+  }
+}
