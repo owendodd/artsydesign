@@ -15,13 +15,13 @@ $small: 768px;
   }
 }
 
-@import 'grid';
-@import 'type';
-@import 'nav';
+@import "grid";
+@import "type";
+@import "nav";
 // Main Styles
 .home {
   width: 100%; // margin-top: 60px;
-  @include vendor (transition, all 250ms ease-in-out);
+  @include vendor(transition, all 250ms ease-in-out);
   img {
     width: 100%;
     position: absolute;
@@ -39,7 +39,7 @@ $small: 768px;
 }
 
 .header {
-  @include vendor (transition, all 250ms ease-in-out);
+  @include vendor(transition, all 250ms ease-in-out);
   &.open {
     overflow: hidden;
     @include vendor(filter, blur(50px));
@@ -60,7 +60,7 @@ $small: 768px;
   padding: 30px;
   z-index: 100;
   backface-visibility: hidden;
-  @include vendor (transition, all 250ms ease-in-out);
+  @include vendor(transition, all 250ms ease-in-out);
   &.open {
     opacity: 1;
     pointer-events: all;
@@ -68,31 +68,48 @@ $small: 768px;
 }
 
 .modal {
-  max-height: 560px;
+  max-height: calc(100vh - 60px);
   max-width: 440px;
+  overflow: scroll;
   width: 100%;
   height: auto;
   position: relative;
   opacity: 0;
-  padding: 20px 40px 40px;
+  padding: 20px 40px 140px 40px;
   text-align: center;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  @include vendor (transition, all 650ms ease-in-out);
+  @include vendor(transition, all 650ms ease-in-out);
   &.open {
     opacity: 1;
   }
 }
 
+.modal-body {
+  text-align: left;
+}
+
 .screen {
   display: flex;
   flex-direction: column;
-  pointer-events: all;
+  pointer-events: none;
   justify-content: space-between;
-  opacity: 1;
+  opacity: 0;
+  height: 0;
   width: 100%;
-  @include vendor (transition, all 450ms ease-in-out);
+  @include vendor(transition, all 450ms ease);
+}
+
+.screen.show {
+  opacity: 1;
+  pointer-events: all;
+  height: auto;
+}
+
+.screens {
+  overflow: hidden; 
+  height: 100%;
 }
 
 .close {
@@ -107,28 +124,24 @@ $small: 768px;
 }
 
 .space1 {
-  height: 400px;
+  height: 500px;
 }
 
 .space2 {
-  height: 200px;
-}
-
-.hidden {
-  display: none;
-}
-.off {
-  opacity: 0;
+  height: 300px;
 }
 
 .button {
-  width: 100%;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  width: calc(100% - 80px);
   padding: 16px 0;
   border-radius: 3px;
   cursor: pointer;
   color: #fff;
   background-color: #000;
-  @include vendor (transition, all 250ms ease-in-out);
+  @include vendor(transition, all 250ms ease-in-out);
   &:hover {
     background-color: #6e1fff;
   }
