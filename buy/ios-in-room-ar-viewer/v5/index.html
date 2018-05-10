@@ -1,0 +1,53 @@
+<html>
+
+<head>
+  <title>iOS In-room AR Viewer</title>
+  <link href="https://webfonts.artsy.net/force-webfonts.css?a=b" media="all" rel="stylesheet" />
+  <link href="assets/css/styles.css" media="all" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <div data-step="Step 1 of 3" data-target=".screen-1" class="button action reset hide"></div>
+    <div class="modal">
+      <h2>Step 1 of 3</h2>
+      <div class="screen screen-1 show">
+        <p>
+          <strong>Scan the floor</strong><br />
+          Aim at the floor and slowly move your phone in a circular motion.
+        </p>
+        <div class="step-state"><img height="20" class="spinner show" src="assets/img/spinner.svg" /></div>
+        <div class="step-state"><img class="success" src="assets/img/success.svg" /></div>
+        <div data-step="Step 2 of 3" data-target=".screen-2" class="button hidden"></div>
+      </div>
+
+      <div class="screen screen-2">
+        <p>
+          <strong>Set the marker</strong><br />
+          Align the marker to where the floor meets the wall and tap to set.
+        </p>
+        <div data-step="Step 3 of 3" data-target=".screen-3" class="button action set"></div>
+      </div>
+      
+      <div class="screen screen-3">
+        <p>
+          <strong>Place the work</strong><br />
+          Position the work on your wall and tap to place.
+        </p>
+        <div data-step="" data-target=".screen-4" class="button action place"></div>
+      </div>
+      
+      <div class="screen screen-4">
+        <p>
+          Okay. The work has been place. Now walk around the room to lorem ipsum dolor.
+        </p>
+        <div data-step="" data-target=".screen-1" class="button action done"></div>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>
