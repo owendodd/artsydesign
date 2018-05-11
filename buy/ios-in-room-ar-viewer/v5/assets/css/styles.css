@@ -112,7 +112,7 @@ h2 {
   font-weight: bold;
 }
 
-.button.hidden { background: transparent; border: 2px solid #fff; }
+.button.hidden { opacity: 0; }
 .button.set:after { content: 'Set marker'; }
 .button.place:after { content: 'Place work'; }
 .button.done:after { content: 'Done'; color: #fff; }
