@@ -14,6 +14,7 @@ $('.button').click(function() {
     $('.modal').removeClass('show');
     $('.button.reset').addClass('show');
   } else if ($(this).hasClass('reset')) {
+    $('.step-state img').toggleClass('show');
     $('.modal').addClass('show');
     $(this).removeClass('show');
     $('.screen').removeClass('complete');
@@ -29,7 +30,6 @@ function initialize_step_one() {
   setTimeout(function() {
     $('.step-state img').toggleClass('show');
     setTimeout(function () {
-      $('.step-state img').toggleClass('show');
       $('.button.hidden').click();
     }, 700);
   }, 4000);
