@@ -1,4 +1,4 @@
-// initialize_step_one();
+initialize_step_one();
 
 $('.button').click(function() {
   var target = $(this).data('target'),
