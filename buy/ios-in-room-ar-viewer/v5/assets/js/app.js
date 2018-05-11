@@ -32,5 +32,5 @@ function initialize_step_one() {
       $('.step-state img').toggleClass('show');
       $('.button.hidden').click();
     }, 700);
-  }, 3000);
+  }, 4000);
 }

@@ -113,8 +113,8 @@ h2 {
 }
 
 .button.hidden { opacity: 0; }
-.button.set:after { content: 'Set'; }
-.button.place:after { content: 'Place'; }
+.button.set:after { content: 'Set marker'; }
+.button.place:after { content: 'Place work'; }
 .button.done:after { content: 'Done'; color: #fff; }
 .button.reset:after { content: 'Reset'; color: #fff; }
 
