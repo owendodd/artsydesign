@@ -70,7 +70,6 @@ $small: 768px;
 .modal {
   max-height: calc(100vh - 60px);
   max-width: 440px;
-  overflow: scroll;
   width: 100%;
   height: auto;
   position: relative;
@@ -80,8 +79,12 @@ $small: 768px;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  @include vendor(transition, all 650ms ease-in-out);
+  @include vendor(transition, all 650ms ease);
+  // @include vendor(transform, translate(0 , 100%) );
+  // @include vendor(transform, scale(0, 0));
   &.open {
+    // @include vendor(transform, translate(0, 0));
+    // @include vendor(transform, scale(1, 1));
     opacity: 1;
   }
 }
