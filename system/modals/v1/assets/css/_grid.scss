@@ -1,0 +1,67 @@
+@mixin width($cols) {
+  width: 8.33% * $cols;
+  padding: 0 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.grid {
+  max-width: 1192px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.c1  { @include width(1); }
+.c2  { @include width(2); }
+.c3  { @include width(3); }
+.c4  { @include width(4); }
+.c5  { @include width(5); }
+.c6  { @include width(6); }
+.c7  { @include width(7); }
+.c8  { @include width(8); } 
+.c9  { @include width(9); }
+.c10 { @include width(10); }
+.c11 { @include width(11); }
+.c12 { @include width(12); }
+
+@include break(max, $large) {
+  .c1  { @include width(2); }
+  .c2  { @include width(2); }
+  .c3  { @include width(6); }
+  .c4  { @include width(6); }
+  .c5  { @include width(6); }
+  .c6  { @include width(6); }
+  .c7  { @include width(6); }
+  .c8  { @include width(8); } 
+  .c9  { @include width(8); }
+  .c10 { @include width(10); }
+  .c11 { @include width(12); }
+  .c12 { @include width(12); }
+}
+
+@include break(max, $small) {
+  .grid { padding: 0 10px; }
+
+  .c1  { @include width(6); }
+  .c2  { @include width(6); }
+  .c3  { @include width(6); }
+  .c4  { @include width(6); }
+  .c5  { @include width(6); }
+  .c6  { @include width(6); }
+  .c7  { @include width(12); }
+  .c8  { @include width(12); } 
+  .c9  { @include width(12); }
+  .c10 { @include width(12); }
+  .c11 { @include width(12); }
+  .c12 { @include width(12); }
+}
