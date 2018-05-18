@@ -1,0 +1,91 @@
+$xlarge: 1192px;
+$large: 1024px;
+$medium: 900px;
+$small: 768px;
+
+@mixin vendor($property, $val){
+  -webkit-#{$property}: $val;
+  -moz-#{$property}: $val;
+  -ms-#{$property}: $val;
+  #{$property}: $val;
+}
+
+@mixin break($mm, $width) {
+  @media (#{$mm}-width: $width){
+    @content;
+  }
+}
+
+@import 'grid';
+@import 'type';
+@import 'nav';
+
+
+// Main Styles
+
+.toggles {
+  display: flex;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: calc(100vw - 40px);
+  div {
+    min-width: 200px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 2px;
+    color: black;
+    border: 1px solid #e5e5e5;
+    &:hover {
+      opacity: 0.6;
+      cursor: pointer;
+    }
+  }
+  .open {
+    color: white;
+    background-color: black;
+    border: none;
+  }
+}
+
+.banner {
+  position: relative;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:20px;
+  width: 100%;
+  min-height: 60px;
+  text-align: center;
+  background-color: #f8f8f8;
+  p {
+    max-width: calc(100vw - 80px);
+    margin: 0;
+  }
+}
+
+.close {
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  padding: 1px; 
+  right: 20px;
+  &.dark {
+    background-image: url("../img/close-grey.svg");
+    object-fit: contain;
+  }
+  &.light {
+    background-image: url("../img/close-white.svg");
+    object-fit: contain;
+  }
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}
+
+.default {
+
+}
