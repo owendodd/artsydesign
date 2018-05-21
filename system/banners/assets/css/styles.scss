@@ -51,7 +51,7 @@ $small: 768px;
 
 .banner {
   position: relative;
-  margin-top: 60px;
+  margin-top: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,9 +60,51 @@ $small: 768px;
   min-height: 60px;
   text-align: center;
   background-color: #f8f8f8;
+  @include vendor(transition, 250ms all ease);
   p {
     max-width: calc(100vw - 80px);
     margin: 0;
+  }
+  &.open {
+    margin-top: 60px;
+  }
+  &.off {
+    opacity: 0;
+  }
+  &.black {
+    color: white;
+    background-color: black;
+    .close {
+      @extend .light ;
+    }
+  }
+  &.green {
+    color: white;
+    background-color: #0EDA83;
+    .close {
+      @extend .light ;
+    }
+  }
+  &.yellow {
+    color: white;
+    background-color: #F1AF1B;
+    .close {
+      @extend .light ;
+    }
+  }
+  &.red {
+    color: white;
+    background-color: #F7625A;
+    .close {
+      @extend .light ;
+    }
+  }
+  &.purple {
+    color: white;
+    background-color: #6E1FFF;
+    .close {
+      @extend .light ;
+    }
   }
 }
 
