@@ -6,8 +6,10 @@ $('.home').click(function() {
 
 $('.close').click(function() {
   event.preventDefault();
-
-  $('.modal-wrapper, .modal, .home, .header, .blur').removeClass('open');
+  $('.modal').addClass('closed');
+  setTimeout(function(){
+    $('.modal-wrapper, .modal, .home, .header, .blur').removeClass('open');
+  }, 450);
 
 })
 

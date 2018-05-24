@@ -80,10 +80,14 @@ $small: 768px;
   border-radius: 5px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   @include vendor(transition, all 650ms ease);
-  // @include vendor(transform, translate(0 , 10%));
+  @include vendor(transform, translate(0,10%));
   &.open {
-    // @include vendor(transform, translate(0, 0));
+    @include vendor(transform, translate(0,0));
+    @include vendor(transition, all 450ms ease);
     opacity: 1;
+  }
+  &.closed {
+    opacity: 0 !important;
   }
 }
 
