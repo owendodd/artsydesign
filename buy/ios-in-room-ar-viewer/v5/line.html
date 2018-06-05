@@ -1,0 +1,46 @@
+<html>
+
+<head>
+  <title>iOS In-room AR Viewer</title>
+  <link href="https://webfonts.artsy.net/force-webfonts.css?a=b" media="all" rel="stylesheet" />
+  <link href="assets/css/styles.css" media="all" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <style>
+    .line {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      height: 3px;
+      background: #fff;
+      width: 0;
+      transform: translate(-50%,-50%);
+      transition: all 300ms ease;
+    }
+
+    .line.extended {
+      width: 100%;
+    }
+
+    .button.toggle {
+      left: 20px;
+      width: calc(100% - 40px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="line"></div>
+    <div class="button action toggle"></div>
+  </div>
+
+
+  <script>
+    $('.button').click(function() {
+      $('.line').toggleClass('extended');
+    });
+  </script>
+</body>
+
+</html>

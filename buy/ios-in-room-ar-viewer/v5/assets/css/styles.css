@@ -83,6 +83,7 @@ h2 {
   bottom: 90px;
 }
 
+.button.toggle,
 .button.done,
 .button.reset {
   background: transparent;
@@ -117,6 +118,7 @@ h2 {
 .button.place:after { content: 'Place work'; }
 .button.done:after { content: 'Done'; color: #fff; }
 .button.reset:after { content: 'Reset'; color: #fff; }
+.button.toggle:after { content: 'Toggle line'; color: #fff; }
 
 p { margin: 0; padding: 0; }
 
