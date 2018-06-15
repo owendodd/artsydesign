@@ -2,6 +2,7 @@ $xlarge: 1192px;
 $large: 1024px;
 $medium: 900px;
 $small: 768px;
+
 @mixin vendor($property, $val) {
   -webkit-#{$property}: $val;
   -moz-#{$property}: $val;
@@ -34,13 +35,13 @@ $small: 768px;
     }
   }
   .info {
-    margin: 0 0 0 20px ;
+    margin: 0 0 0 20px;
     .name {
-      @extend .sans8;
-      @extend .med;
+      @extend .sans8 ;
+      @extend .med ;
     }
     .bio {
-      @extend .sans4t;
+      @extend .sans4t ;
     }
   }
 }
