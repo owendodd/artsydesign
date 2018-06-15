@@ -2,8 +2,7 @@ $xlarge: 1192px;
 $large: 1024px;
 $medium: 900px;
 $small: 768px;
-
-@mixin vendor($property, $val){
+@mixin vendor($property, $val) {
   -webkit-#{$property}: $val;
   -moz-#{$property}: $val;
   -ms-#{$property}: $val;
@@ -11,7 +10,7 @@ $small: 768px;
 }
 
 @mixin break($mm, $width) {
-  @media (#{$mm}-width: $width){
+  @media (#{$mm}-width: $width) {
     @content;
   }
 }
@@ -19,7 +18,47 @@ $small: 768px;
 @import 'grid';
 @import 'type';
 @import 'nav';
-
-
 // Main Styles
+.container {
+  max-width: 720px;
+  padding: 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  .avatar {
+    img {
+      width: 120px;
+      height: 120px;
+      @include vendor(clip-path, circle(50% at 50% 50%));
+      flex-shrink: 0;
+    }
+  }
+  .info {
+    margin: 0 0 0 20px ;
+    .name {
+      @extend .sans8;
+      @extend .med;
+    }
+    .bio {
+      @extend .sans4t;
+    }
+  }
+}
 
+@include break(max, $small) {
+  .container {
+    flex-direction: column;
+    .info {
+      margin: 20px 0 0;
+      text-align: center;
+      .name {
+        font-size: 22px;
+        line-height: 30px;
+      }
+      .bio {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+}
