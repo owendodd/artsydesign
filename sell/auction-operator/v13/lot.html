@@ -1,6 +1,8 @@
 <html>
   <head>
     <title>v13 - Auction Operator</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://webfonts.artsy.net/unica-webfonts.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://webfonts.artsy.net/force-webfonts.css?a=b" />
     <link href="assets/css/alerts.css" media="all" rel="stylesheet" />
     <link href="assets/css/styles.css" media="all" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -20,7 +22,7 @@
       <div class="alert-window starting-ask show">
         <div class="content">
           <div class="options">
-            <div class="lot">Lot 874</div>
+            <div class="lot">Lot 37</div>
             <div data-keycode="67" class="small-button change-lot">Change lot</div>
             <div data-keycode="80" class="small-button pass-lot">Skip lot</div>
           </div>
@@ -40,14 +42,14 @@
         <input type="text" placeholder="Change lot ..." />
         <div class="input-search-icon"></div>
         <div class="content">
-          <div class="a lot-button sold">Lot 874: Ugo Rondinone</div>
-          <div class="b lot-button current">Lot 875: Zoe Leondar</div>
-          <div class="c lot-button upcoming">Lot 876: Laura Owens</div>
-          <div class="d lot-button upcoming">Lot 877: Karen Kilimnik</div>
-          <div class="a lot-button upcoming">Lot 878: Ugo Rondinone</div>
-          <div class="b lot-button upcoming">Lot 879: Zoe Leondar</div>
-          <div class="c lot-button upcoming">Lot 880: Laura Owens</div>
-          <div class="d lot-button upcoming">Lot 881: Karen Kilimnik</div>
+          <div class="a lot-button sold">Lot 37: Ugo Rondinone</div>
+          <div class="b lot-button current">Lot 38: Francis Alÿs</div>
+          <div class="c lot-button upcoming">Lot 39: Andro Wekua</div>
+          <div class="d lot-button upcoming">Lot 40: Jim Hodges</div>
+          <div class="a lot-button upcoming">Lot 41: Jutta Koether</div>
+          <div class="b lot-button upcoming">Lot 42: Karen Kilimnik</div>
+          <div class="c lot-button upcoming">Lot 43: Matthew Barney</div>
+          <div class="d lot-button upcoming">Lot 44: Karen Kilimnik</div>
           
         </div>
         <div class="alert-buttons">
@@ -77,7 +79,7 @@
 
       <div class="alert-window pass-lot">
         <div class="content">
-          <span class="message">Pass lot 874?</span>
+          <span class="message">Pass lot 37?</span>
         </div>
         <div class="alert-buttons">
           <span data-keycode="27" class="cancel small-button">Cancel</span>
@@ -132,12 +134,15 @@
             </div>
             <span class="increment-title">Increment</span> 
             <span class="increment-wrapper">
-              +<span class="increment"></span>
-              <span class="placeholder-increment"></span>
+              &nbsp;<div class="increment-spacer">
+                <span class="placeholder-button-value hide"></span>
+                <span class="increment"></span>
+              </div>
+              <!-- <span class="placeholder-increment"></span> -->
             </span>
             <div class="increment-strategy-buttons">
               <span data-keycode="68" data-name=".default" class="default small-button toggle active">Default</span>
-              <span data-keycode="84" data-name=".two-five-eight" class="two-five-eight small-button toggle">2-5-8</span>
+              <span data-keycode="84" data-name=".two-five-eight" class="two-five-eight small-button toggle">0-2-5-8</span>
               <span data-keycode="77" data-name=".manual" class="manual small-button toggle">Manual</span>
             </div>
           </div>
