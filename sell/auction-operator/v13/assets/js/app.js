@@ -109,11 +109,11 @@ $(document).keyup(function(event) {
 
 function del_char() {
   if (Bid.increment_focus) {
-    Bid.temp_ask = Bid.temp_ask.replace(/,/g, '');
-    Bid.temp_ask = Bid.temp_ask.slice(0,-1);
-    Bid.temp_ask = Bid.temp_ask == '' ? '' : Math.abs(Bid.temp_ask);
-    Bid.temp_ask = Bid.temp_ask.toLocaleString();
-    $('.current-ask .increment').html(Bid.temp_ask);
+    Bid.temp_increment = Bid.temp_increment.replace(/,/g, '');
+    Bid.temp_increment = Bid.temp_increment.slice(0,-1);
+    Bid.temp_increment = Math.abs(Bid.temp_increment);
+    Bid.temp_increment = Bid.temp_increment.toLocaleString();
+    $('.current-increment .increment').html(Bid.temp_increment);
     if (Bid.temp_ask == '') {
       $(".current-increment .placeholder-button-value").removeClass('hide');
     }
