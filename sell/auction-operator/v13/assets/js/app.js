@@ -114,6 +114,9 @@ function del_char() {
     Bid.temp_increment = Math.abs(Bid.temp_increment);
     Bid.temp_increment = Bid.temp_increment.toLocaleString();
     $('.current-increment .increment').html(Bid.temp_increment);
+    if (Bid.temp_ask == '') {
+      $(".current-increment .placeholder-button-value").removeClass('hide');
+    }
   } else {
     Bid.temp_ask = Bid.temp_ask.replace(/,/g, '');
     Bid.temp_ask = Bid.temp_ask.slice(0,-1);
@@ -129,7 +132,9 @@ function del_char() {
 function focus_increment() {
   Bid.increment_focus = true;
   $('.small-wide-button.current-increment').addClass('typing');
-  $('.current-increment .increment').html('0');
+  $(".current-increment .placeholder-button-value").html(Bid.increment_string).removeClass('hide');
+  
+  $('.current-increment .increment').html('');
   toggle_increment_strategy('.toggle.manual', '.manual');
 }
 
@@ -140,6 +145,7 @@ function update_number(value) {
     Bid.temp_increment = Math.abs(Bid.temp_increment);
     Bid.temp_increment = Bid.temp_increment.toLocaleString();
     $('.current-increment .increment').html(Bid.temp_increment);
+    $(".placeholder-button-value").addClass("hide");
   } else {
     $(".wide-button.current-ask").addClass("typing");
     $(".current-ask .button-value").html('');
@@ -163,6 +169,7 @@ function reset_number() {
     $('.current-increment .increment').html(Bid.increment_string);
     $('.current-increment').removeClass('typing');
     toggle_increment_strategy(Bid.prev_toggle, 'default');
+    $(".current-increment .placeholder-button-value").addClass("hide");
     Bid.increment_focus = false;
     typing = false;
   } else {
@@ -314,11 +321,11 @@ function set_sell_at() {
 
 function add_to_history(source) {
   if (source == 'Floor' && Bid.online_max_bid >= Bid.sell_value) {
-    var online_bidder_id = '#' + Math.floor(Math.random() * 1000000);
-    var line_item = '<div class="line-item"><span class="description">' + source + '</span><span class="value">' + Bid.sell_string + '</span></div>' +
-                    '<div class="line-item rejected"><span class="description">' + online_bidder_id + '</span><span class="value">' + Bid.sell_string + '</span></div>';
+    var online_bidder_id = 'Artsy#' + Math.floor(Math.random() * 100000);
+    var line_item = '<div class="line-item"><span class="description">' + source + '</span><span class="value">' + Bid.sell_string + '</span></div>';
+                    // '<div class="line-item rejected"><span class="description">' + online_bidder_id + '</span><span class="value">' + Bid.sell_string + '</span></div>';
   } else {
-    source = source == 'online' ? '#' + Math.floor(Math.random() * 1000000) : source;
+    source = source == 'online' ? 'Artsy#' + Math.floor(Math.random() * 100000) : source;
     var line_item = '<div class="line-item"><span class="description">' + source + '</span><span class="value">' + Bid.sell_string + '</span></div>';
   }
 
